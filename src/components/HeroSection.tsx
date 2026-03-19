@@ -23,15 +23,8 @@ const HeroSection = () => (
     <div className="relative flex-1 flex items-center">
       <div className="container-narrow px-4 py-24 md:py-32">
         <div className="max-w-3xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center gap-2 bg-accent/15 border border-accent/30 backdrop-blur-sm text-accent px-5 py-2 text-xs font-bold uppercase tracking-[0.2em] mb-8 rounded-full"
-          >
-            <Sparkles className="h-3.5 w-3.5" />
-            Unabhängiger Sachverständiger
-          </motion.div>
+
+
 
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
