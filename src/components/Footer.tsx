@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, ChevronRight } from "lucide-react";
+import logoImg from "@/assets/logo-ing.png";
 
 const Footer = () => (
   <footer className="blue-gradient text-primary-foreground">
