@@ -12,16 +12,17 @@ const steps = [
 
 const ProcessSection = () => (
   <section id="ablauf" className="section-padding blue-gradient overflow-hidden relative">
-    <div className="absolute inset-0 opacity-5">
-      <div className="absolute top-20 left-10 w-64 h-64 border border-primary-foreground/20 rounded-full" />
-      <div className="absolute bottom-10 right-20 w-96 h-96 border border-primary-foreground/10 rounded-full" />
+    <div className="absolute inset-0 opacity-[0.03]">
+      <div className="absolute top-20 left-10 w-64 h-64 border border-primary-foreground rounded-full" />
+      <div className="absolute bottom-10 right-20 w-96 h-96 border border-primary-foreground rounded-full" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] border border-primary-foreground rounded-full" />
     </div>
     <div className="container-narrow relative">
       <ScrollReveal>
         <div className="text-center mb-16">
           <span className="text-accent font-bold text-sm uppercase tracking-[0.2em]">Der Ablauf</span>
           <h2 className="font-heading text-4xl md:text-6xl text-primary-foreground mt-3">5 einfache Schritte</h2>
-          <div className="w-20 h-1 gold-gradient mx-auto mt-4" />
+          <div className="section-divider" />
         </div>
       </ScrollReveal>
       <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
@@ -33,7 +34,7 @@ const ProcessSection = () => (
               transition={{ duration: 0.3 }}
             >
               <div className="relative mx-auto mb-6">
-                <div className="w-20 h-20 border-2 border-accent/30 flex items-center justify-center mx-auto group-hover:border-accent group-hover:bg-accent/10 transition-all duration-300 rounded-sm">
+                <div className="w-20 h-20 border-2 border-primary-foreground/20 flex items-center justify-center mx-auto group-hover:border-accent group-hover:bg-accent/10 transition-all duration-300">
                   <s.icon className="h-8 w-8 text-accent" />
                 </div>
                 <span className="absolute -top-3 -right-3 gold-gradient text-accent-foreground font-heading text-sm w-8 h-8 flex items-center justify-center shadow-md">{s.num}</span>

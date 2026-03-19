@@ -20,9 +20,10 @@ const FAQSection = () => (
   <section id="faq" className="section-padding bg-card overflow-hidden">
     <div className="container-narrow max-w-3xl">
       <ScrollReveal>
-        <div className="text-center mb-14">
-          <span className="text-accent font-bold text-sm uppercase tracking-widest">FAQ</span>
+        <div className="text-center mb-16">
+          <span className="text-primary font-bold text-sm uppercase tracking-[0.2em]">FAQ</span>
           <h2 className="font-heading text-4xl md:text-5xl text-foreground mt-3">Häufige Fragen</h2>
+          <div className="section-divider" />
         </div>
       </ScrollReveal>
       <Accordion type="single" collapsible className="space-y-3">
@@ -31,7 +32,7 @@ const FAQSection = () => (
             <AccordionItem value={`faq-${i}`} className="bg-secondary border-none px-6">
               <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline py-5 gap-3">
                 <div className="flex items-center gap-3">
-                  <HelpCircle className="h-5 w-5 text-accent flex-shrink-0" />
+                  <HelpCircle className="h-5 w-5 text-primary flex-shrink-0" />
                   <span>{faq.q}</span>
                 </div>
               </AccordionTrigger>

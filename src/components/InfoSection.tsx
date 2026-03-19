@@ -13,9 +13,10 @@ const InfoSection = () => (
   <section className="section-padding bg-card overflow-hidden">
     <div className="container-narrow">
       <ScrollReveal>
-        <div className="text-center mb-14">
-          <span className="text-accent font-bold text-sm uppercase tracking-widest">Wissenswertes</span>
+        <div className="text-center mb-16">
+          <span className="text-primary font-bold text-sm uppercase tracking-[0.2em]">Wissenswertes</span>
           <h2 className="font-heading text-4xl md:text-5xl text-foreground mt-3">Gut informiert</h2>
+          <div className="section-divider" />
         </div>
       </ScrollReveal>
       <div className="grid md:grid-cols-2 gap-x-12 gap-y-8">
@@ -23,8 +24,8 @@ const InfoSection = () => (
           <ScrollReveal key={s.title} delay={i * 0.1} direction={i % 2 === 0 ? "left" : "right"}>
             <div className={`flex gap-5 ${i === sections.length - 1 && sections.length % 2 !== 0 ? 'md:col-span-2 md:max-w-xl md:mx-auto' : ''}`}>
               <div className="flex-shrink-0">
-                <div className="gold-gradient w-12 h-12 flex items-center justify-center">
-                  <s.icon className="h-6 w-6 text-accent-foreground" />
+                <div className="bg-primary w-12 h-12 flex items-center justify-center">
+                  <s.icon className="h-6 w-6 text-primary-foreground" />
                 </div>
               </div>
               <div>

@@ -43,13 +43,13 @@ const IntroSection = () => (
                 <span className="block text-xs font-bold text-accent-foreground uppercase tracking-widest mt-1">Jahre Erfahrung</span>
               </div>
             </div>
-            <div className="absolute -top-3 -left-3 w-24 h-24 border-t-4 border-l-4 border-accent hidden md:block" />
+            <div className="absolute -top-3 -left-3 w-24 h-24 border-t-4 border-l-4 border-primary hidden md:block" />
           </div>
         </ScrollReveal>
 
         <ScrollReveal direction="right" delay={0.2}>
           <div>
-            <span className="text-accent font-bold text-sm uppercase tracking-[0.2em]">Über uns</span>
+            <span className="text-primary font-bold text-sm uppercase tracking-[0.2em]">Über uns</span>
             <h2 className="font-heading text-4xl md:text-5xl text-foreground mt-3 mb-6 leading-[1.1]">
               Kompetenz trifft<br />Unabhängigkeit
             </h2>
@@ -61,8 +61,8 @@ const IntroSection = () => (
               {highlights.map((h, i) => (
                 <ScrollReveal key={h} delay={0.3 + i * 0.1}>
                   <div className="flex items-center gap-3 group">
-                    <div className="w-6 h-6 bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <CheckCircle className="h-4 w-4 text-primary" />
+                    <div className="w-7 h-7 bg-primary flex items-center justify-center flex-shrink-0">
+                      <CheckCircle className="h-4 w-4 text-primary-foreground" />
                     </div>
                     <span className="text-foreground font-medium">{h}</span>
                   </div>
@@ -71,7 +71,7 @@ const IntroSection = () => (
             </div>
             <motion.a
               href="#kontakt"
-              className="inline-flex items-center gap-2 gold-gradient text-accent-foreground font-bold uppercase tracking-wider text-sm px-6 py-3 shadow-md"
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-bold uppercase tracking-wider text-sm px-7 py-3.5 shadow-md hover:shadow-lg transition-shadow"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
             >

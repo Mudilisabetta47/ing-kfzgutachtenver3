@@ -18,7 +18,7 @@ function GoldSphere() {
       <mesh ref={meshRef} scale={2.5}>
         <icosahedronGeometry args={[1, 5]} />
         <MeshDistortMaterial
-          color="#2570b5"
+          color="#163b78"
           roughness={0.12}
           metalness={0.98}
           distort={0.2}
@@ -90,7 +90,7 @@ const HeroScene3D = () => (
     <Canvas camera={{ position: [0, 0, 7], fov: 42 }} gl={{ alpha: true, antialias: true }}>
       <Suspense fallback={null}>
         <ambientLight intensity={0.25} />
-        <directionalLight position={[5, 5, 5]} intensity={1.5} color="#2570b5" />
+        <directionalLight position={[5, 5, 5]} intensity={1.5} color="#163b78" />
         <directionalLight position={[-3, -3, 2]} intensity={0.5} color="#eab308" />
         <pointLight position={[0, 3, 3]} intensity={0.6} color="#ffffff" />
         <GoldSphere />

@@ -14,8 +14,8 @@ const HeroSection = () => (
   <section id="start" className="relative min-h-[100vh] flex flex-col overflow-hidden">
     <div className="absolute inset-0">
       <img src={heroImg} alt="Kfz-Gutachter bei der Fahrzeugbegutachtung" className="w-full h-full object-cover scale-105" />
-      <div className="absolute inset-0 bg-gradient-to-r from-primary-dark/98 via-primary/92 to-primary/50" />
-      <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/60 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[hsl(217,75%,18%)]/98 via-[hsl(217,69%,28%)]/92 to-[hsl(217,69%,28%)]/50" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[hsl(217,75%,18%)]/70 via-transparent to-transparent" />
     </div>
 
     <HeroScene3D />
@@ -85,7 +85,7 @@ const HeroSection = () => (
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 1.2 }}
-      className="relative bg-primary-dark/80 backdrop-blur-xl border-t border-primary-foreground/10"
+      className="relative bg-[hsl(217,75%,18%)]/80 backdrop-blur-xl border-t border-primary-foreground/10"
     >
       <div className="container-narrow px-4 py-5">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
