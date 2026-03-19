@@ -1,4 +1,6 @@
 import { Phone, CalendarCheck, Search, FileText, Headphones } from "lucide-react";
+import { motion } from "framer-motion";
+import ScrollReveal from "./ScrollReveal";
 
 const steps = [
   { icon: Phone, num: "01", title: "Kontakt", desc: "Kostenlos & unverbindlich beraten lassen." },
@@ -9,24 +11,32 @@ const steps = [
 ];
 
 const ProcessSection = () => (
-  <section id="ablauf" className="section-padding blue-gradient">
+  <section id="ablauf" className="section-padding blue-gradient overflow-hidden">
     <div className="container-narrow">
-      <div className="text-center mb-14">
-        <span className="text-accent font-bold text-sm uppercase tracking-widest">Der Ablauf</span>
-        <h2 className="font-heading text-4xl md:text-6xl text-primary-foreground mt-3">5 einfache Schritte</h2>
-      </div>
+      <ScrollReveal>
+        <div className="text-center mb-14">
+          <span className="text-accent font-bold text-sm uppercase tracking-widest">Der Ablauf</span>
+          <h2 className="font-heading text-4xl md:text-6xl text-primary-foreground mt-3">5 einfache Schritte</h2>
+        </div>
+      </ScrollReveal>
       <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
-        {steps.map((s) => (
-          <div key={s.num} className="text-center">
-            <div className="relative mx-auto mb-5">
-              <div className="gold-gradient w-16 h-16 flex items-center justify-center mx-auto">
-                <s.icon className="h-7 w-7 text-accent-foreground" />
+        {steps.map((s, i) => (
+          <ScrollReveal key={s.num} delay={i * 0.15}>
+            <motion.div
+              className="text-center"
+              whileHover={{ y: -8 }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="relative mx-auto mb-5">
+                <div className="gold-gradient w-16 h-16 flex items-center justify-center mx-auto">
+                  <s.icon className="h-7 w-7 text-accent-foreground" />
+                </div>
+                <span className="absolute -top-2 -right-2 bg-primary-foreground text-primary font-heading text-sm w-7 h-7 flex items-center justify-center">{s.num}</span>
               </div>
-              <span className="absolute -top-2 -right-2 bg-primary-foreground text-primary font-heading text-sm w-7 h-7 flex items-center justify-center">{s.num}</span>
-            </div>
-            <h3 className="font-heading text-xl text-primary-foreground mb-1">{s.title}</h3>
-            <p className="text-primary-foreground/60 text-sm">{s.desc}</p>
-          </div>
+              <h3 className="font-heading text-xl text-primary-foreground mb-1">{s.title}</h3>
+              <p className="text-primary-foreground/60 text-sm">{s.desc}</p>
+            </motion.div>
+          </ScrollReveal>
         ))}
       </div>
     </div>
