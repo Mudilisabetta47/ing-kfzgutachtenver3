@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
+import logoImg from "@/assets/logo-ing.png";
 
 const navItems = [
   { label: "Start", href: "#start" },
@@ -16,14 +17,8 @@ const Header = () => {
   return (
     <header className="bg-card sticky top-0 z-50 shadow-md">
       <div className="container-narrow flex items-center justify-between py-3 px-4">
-        <a href="#start" className="flex items-center gap-3">
-          <div className="gold-gradient w-12 h-12 flex items-center justify-center">
-            <span className="font-heading text-accent-foreground text-2xl leading-none tracking-wider">KG</span>
-          </div>
-          <div className="leading-tight">
-            <span className="font-heading text-foreground text-xl md:text-2xl tracking-wide">Kfz Gutachter</span>
-            <span className="block text-xs text-muted-foreground font-medium tracking-wider uppercase">Mustermann · Hannover</span>
-          </div>
+        <a href="#start" className="flex items-center">
+          <img src={logoImg} alt="ING KFZ Gutachten" className="h-10 md:h-12" />
         </a>
 
         <nav className="hidden lg:flex items-center gap-1">

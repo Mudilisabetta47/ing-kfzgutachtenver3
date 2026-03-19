@@ -1,15 +1,13 @@
 import { Phone, Mail, MapPin, ChevronRight } from "lucide-react";
+import logoImg from "@/assets/logo-ing.png";
 
 const Footer = () => (
   <footer className="blue-gradient text-primary-foreground">
     <div className="container-narrow px-4 py-16">
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
-          <div className="flex items-center gap-3 mb-5">
-            <div className="gold-gradient w-10 h-10 flex items-center justify-center">
-              <span className="font-heading text-accent-foreground text-xl">KG</span>
-            </div>
-            <span className="font-heading text-2xl">Kfz Gutachter</span>
+          <div className="mb-5">
+            <img src={logoImg} alt="ING KFZ Gutachten" className="h-10 brightness-0 invert" />
           </div>
           <p className="text-primary-foreground/60 text-sm leading-relaxed">
             Ihr unabhängiger Sachverständiger in Hannover für Unfallgutachten, Fahrzeugbewertungen und mehr.
@@ -54,7 +52,7 @@ const Footer = () => (
 
     <div className="border-t border-primary-foreground/10">
       <div className="container-narrow px-4 py-4 flex flex-wrap justify-between items-center gap-4 text-xs text-primary-foreground/40">
-        <span>© 2026 Kfz Gutachter Mustermann</span>
+        <span>© 2026 ING KFZ Gutachten</span>
         <div className="flex gap-4">
           <a href="#" className="hover:text-accent transition-colors">Impressum</a>
           <a href="#" className="hover:text-accent transition-colors">Datenschutz</a>

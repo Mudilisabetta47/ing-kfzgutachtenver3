@@ -69,7 +69,7 @@ const ContactSection = () => {
           <ScrollReveal direction="right" delay={0.2}>
             <div className="space-y-6">
               <div className="blue-gradient p-8 text-primary-foreground">
-                <h3 className="font-heading text-2xl mb-6">Kfz Gutachter Mustermann</h3>
+                <h3 className="font-heading text-2xl mb-6">ING KFZ Gutachten</h3>
                 <div className="space-y-4">
                   <a href="tel:051112345678" className="flex items-center gap-4 hover:text-accent transition-colors">
                     <div className="gold-gradient w-10 h-10 flex items-center justify-center flex-shrink-0"><Phone className="h-5 w-5 text-accent-foreground" /></div>

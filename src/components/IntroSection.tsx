@@ -33,7 +33,7 @@ const IntroSection = () => (
         <ScrollReveal direction="left">
           <div className="relative">
             <div className="relative overflow-hidden">
-              <img src={aboutImg} alt="Kfz-Gutachter Mustermann" className="w-full h-[520px] object-cover" />
+              <img src={aboutImg} alt="ING KFZ Gutachten" className="w-full h-[520px] object-cover" />
             </div>
             <div className="absolute -bottom-6 -right-6 gold-gradient p-6 hidden md:block shadow-2xl">
               <div className="text-center">
