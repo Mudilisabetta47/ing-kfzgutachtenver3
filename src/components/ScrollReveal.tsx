@@ -12,27 +12,17 @@ interface Props {
 const ScrollReveal = ({ children, className = "", delay = 0, direction = "up" }: Props) => {
   const { ref, isInView } = useScrollReveal();
 
-  const variants = {
-    hidden: {
-      opacity: 0,
-      y: direction === "up" ? 40 : 0,
-      x: direction === "left" ? -40 : direction === "right" ? 40 : 0,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      x: 0,
-      transition: { duration: 0.7, delay, ease: [0.25, 0.46, 0.45, 0.94] },
-    },
-  };
-
   return (
     <motion.div
       ref={ref}
       className={className}
-      initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
-      variants={variants}
+      initial={{
+        opacity: 0,
+        y: direction === "up" ? 40 : 0,
+        x: direction === "left" ? -40 : direction === "right" ? 40 : 0,
+      }}
+      animate={isInView ? { opacity: 1, y: 0, x: 0 } : undefined}
+      transition={{ duration: 0.7, delay, ease: "easeOut" }}
     >
       {children}
     </motion.div>
