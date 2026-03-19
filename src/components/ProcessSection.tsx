@@ -11,30 +11,35 @@ const steps = [
 ];
 
 const ProcessSection = () => (
-  <section id="ablauf" className="section-padding blue-gradient overflow-hidden">
-    <div className="container-narrow">
+  <section id="ablauf" className="section-padding blue-gradient overflow-hidden relative">
+    <div className="absolute inset-0 opacity-5">
+      <div className="absolute top-20 left-10 w-64 h-64 border border-primary-foreground/20 rounded-full" />
+      <div className="absolute bottom-10 right-20 w-96 h-96 border border-primary-foreground/10 rounded-full" />
+    </div>
+    <div className="container-narrow relative">
       <ScrollReveal>
-        <div className="text-center mb-14">
-          <span className="text-accent font-bold text-sm uppercase tracking-widest">Der Ablauf</span>
+        <div className="text-center mb-16">
+          <span className="text-accent font-bold text-sm uppercase tracking-[0.2em]">Der Ablauf</span>
           <h2 className="font-heading text-4xl md:text-6xl text-primary-foreground mt-3">5 einfache Schritte</h2>
+          <div className="w-20 h-1 gold-gradient mx-auto mt-4" />
         </div>
       </ScrollReveal>
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
         {steps.map((s, i) => (
           <ScrollReveal key={s.num} delay={i * 0.15}>
             <motion.div
-              className="text-center"
+              className="text-center group"
               whileHover={{ y: -8 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="relative mx-auto mb-5">
-                <div className="gold-gradient w-16 h-16 flex items-center justify-center mx-auto">
-                  <s.icon className="h-7 w-7 text-accent-foreground" />
+              <div className="relative mx-auto mb-6">
+                <div className="w-20 h-20 border-2 border-accent/30 flex items-center justify-center mx-auto group-hover:border-accent group-hover:bg-accent/10 transition-all duration-300 rounded-sm">
+                  <s.icon className="h-8 w-8 text-accent" />
                 </div>
-                <span className="absolute -top-2 -right-2 bg-primary-foreground text-primary font-heading text-sm w-7 h-7 flex items-center justify-center">{s.num}</span>
+                <span className="absolute -top-3 -right-3 gold-gradient text-accent-foreground font-heading text-sm w-8 h-8 flex items-center justify-center shadow-md">{s.num}</span>
               </div>
-              <h3 className="font-heading text-xl text-primary-foreground mb-1">{s.title}</h3>
-              <p className="text-primary-foreground/60 text-sm">{s.desc}</p>
+              <h3 className="font-heading text-xl text-primary-foreground mb-2">{s.title}</h3>
+              <p className="text-primary-foreground/60 text-sm leading-relaxed">{s.desc}</p>
             </motion.div>
           </ScrollReveal>
         ))}
