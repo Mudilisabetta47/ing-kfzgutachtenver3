@@ -6,11 +6,8 @@ const Footer = () => (
     <div className="container-narrow px-4 py-16">
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
-          <div className="flex items-center gap-3 mb-5">
-            <div className="gold-gradient w-10 h-10 flex items-center justify-center">
-              <span className="font-heading text-accent-foreground text-xl">KG</span>
-            </div>
-            <span className="font-heading text-2xl">Kfz Gutachter</span>
+          <div className="mb-5">
+            <img src={logoImg} alt="ING KFZ Gutachten" className="h-10 brightness-0 invert" />
           </div>
           <p className="text-primary-foreground/60 text-sm leading-relaxed">
             Ihr unabhängiger Sachverständiger in Hannover für Unfallgutachten, Fahrzeugbewertungen und mehr.
