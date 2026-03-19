@@ -16,9 +16,9 @@ const ContactSection = () => {
       <div className="container-narrow">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <span className="text-accent font-bold text-sm uppercase tracking-[0.2em]">Kontakt</span>
+            <span className="text-primary font-bold text-sm uppercase tracking-[0.2em]">Kontakt</span>
             <h2 className="font-heading text-4xl md:text-6xl text-foreground mt-3">Jetzt anfragen</h2>
-            <div className="w-20 h-1 gold-gradient mx-auto mt-4" />
+            <div className="section-divider" />
           </div>
         </ScrollReveal>
 
@@ -70,8 +70,8 @@ const ContactSection = () => {
                   </div>
                   <motion.button
                     type="submit"
-                    className="w-full gold-gradient text-accent-foreground font-bold py-4 text-base uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg shadow-accent/20"
-                    whileHover={{ scale: 1.02, boxShadow: "0 20px 40px -10px rgba(234,179,8,0.4)" }}
+                    className="w-full bg-primary text-primary-foreground font-bold py-4 text-base uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-shadow"
+                    whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
                     <Send className="h-5 w-5" />
@@ -123,7 +123,7 @@ const ContactSection = () => {
                 whileHover={{ borderColor: "hsl(45, 100%, 50%)" }}
               >
                 <h4 className="font-heading text-xl text-foreground mb-2 flex items-center gap-2">
-                  <ArrowRight className="h-5 w-5 text-accent" /> Kostenlose Erstberatung
+                  <ArrowRight className="h-5 w-5 text-primary" /> Kostenlose Erstberatung
                 </h4>
                 <p className="text-muted-foreground text-sm leading-relaxed">Rufen Sie uns an – wir beraten Sie kostenlos und unverbindlich zu Ihrem Schadenfall.</p>
               </motion.div>

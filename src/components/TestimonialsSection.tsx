@@ -13,16 +13,16 @@ const TestimonialsSection = () => (
     <div className="container-narrow">
       <ScrollReveal>
         <div className="text-center mb-16">
-          <span className="text-accent font-bold text-sm uppercase tracking-[0.2em]">Kundenstimmen</span>
+          <span className="text-primary font-bold text-sm uppercase tracking-[0.2em]">Kundenstimmen</span>
           <h2 className="font-heading text-4xl md:text-5xl text-foreground mt-3">Das sagen unsere Kunden</h2>
-          <div className="w-20 h-1 gold-gradient mx-auto mt-4" />
+          <div className="section-divider" />
         </div>
       </ScrollReveal>
       <div className="grid md:grid-cols-3 gap-6">
         {testimonials.map((t, i) => (
           <ScrollReveal key={t.name} delay={i * 0.15}>
             <motion.div
-              className="bg-card p-8 relative h-full border-t-4 border-primary hover:border-accent transition-colors duration-300"
+              className="bg-card p-8 relative h-full border-b-4 border-primary hover:border-accent transition-colors duration-300"
               whileHover={{ y: -5, boxShadow: "0 25px 50px -15px rgba(0,0,0,0.12)" }}
               transition={{ duration: 0.3 }}
             >
