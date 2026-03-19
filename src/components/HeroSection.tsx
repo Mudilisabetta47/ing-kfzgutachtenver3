@@ -1,54 +1,55 @@
-import { Phone, Shield, Clock, MessageCircle, BadgeCheck, ChevronRight } from "lucide-react";
+import { Phone, Shield, Clock, MessageCircle, BadgeCheck, ChevronRight, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-gutachter.jpg";
 import HeroScene3D from "./HeroScene3D";
 
 const trustItems = [
-  { icon: Shield, text: "Unabhängig" },
-  { icon: Clock, text: "Schnell vor Ort" },
+  { icon: Shield, text: "Unabhängig & zertifiziert" },
+  { icon: Clock, text: "24h Terminfindung" },
   { icon: MessageCircle, text: "Kostenlose Erstberatung" },
   { icon: BadgeCheck, text: "Für Geschädigte kostenfrei" },
 ];
 
 const HeroSection = () => (
-  <section id="start" className="relative min-h-screen flex flex-col overflow-hidden">
+  <section id="start" className="relative min-h-[100vh] flex flex-col overflow-hidden">
     <div className="absolute inset-0">
-      <img src={heroImg} alt="Kfz-Gutachter bei der Fahrzeugbegutachtung" className="w-full h-full object-cover" />
-      <div className="absolute inset-0 bg-gradient-to-r from-primary-dark/97 via-primary/90 to-primary/60" />
+      <img src={heroImg} alt="Kfz-Gutachter bei der Fahrzeugbegutachtung" className="w-full h-full object-cover scale-105" />
+      <div className="absolute inset-0 bg-gradient-to-r from-primary-dark/98 via-primary/92 to-primary/50" />
+      <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/60 via-transparent to-transparent" />
     </div>
 
     <HeroScene3D />
 
     <div className="relative flex-1 flex items-center">
-      <div className="container-narrow px-4 py-20">
+      <div className="container-narrow px-4 py-24 md:py-32">
         <div className="max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center gap-2 gold-gradient text-accent-foreground px-4 py-1.5 text-xs font-bold uppercase tracking-widest mb-8"
+            className="inline-flex items-center gap-2 bg-accent/15 border border-accent/30 backdrop-blur-sm text-accent px-5 py-2 text-xs font-bold uppercase tracking-[0.2em] mb-8 rounded-full"
           >
-            <Shield className="h-3.5 w-3.5" />
+            <Sparkles className="h-3.5 w-3.5" />
             Unabhängiger Sachverständiger
           </motion.div>
 
           <motion.h1
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="font-heading text-5xl md:text-7xl lg:text-[6rem] text-primary-foreground leading-[0.95] mb-6"
+            transition={{ duration: 0.9, delay: 0.4 }}
+            className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-[6.5rem] text-primary-foreground leading-[0.92] mb-8"
           >
             Ihr Kfz-Gutachter<br />
-            <span className="text-accent">in Hannover</span>
+            <span className="text-accent drop-shadow-[0_2px_10px_rgba(234,179,8,0.3)]">in Hannover</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.7 }}
-            className="text-primary-foreground/80 text-lg md:text-xl mb-10 max-w-xl leading-relaxed font-light"
+            className="text-primary-foreground/80 text-lg md:text-xl mb-12 max-w-xl leading-relaxed font-light"
           >
-            Unfallgutachten, Schadengutachten und Fahrzeugbewertungen – schnell, unabhängig und zuverlässig.
+            Unfallgutachten, Schadengutachten und Fahrzeugbewertungen – schnell, unabhängig und zuverlässig. Für Ihren vollen Schadenersatz.
           </motion.p>
 
           <motion.div
@@ -59,8 +60,8 @@ const HeroSection = () => (
           >
             <motion.a
               href="#kontakt"
-              className="gold-gradient text-accent-foreground font-bold px-8 py-4 text-base uppercase tracking-wider flex items-center gap-2"
-              whileHover={{ scale: 1.05 }}
+              className="gold-gradient text-accent-foreground font-bold px-10 py-4 text-base uppercase tracking-wider flex items-center gap-2 shadow-lg shadow-accent/20"
+              whileHover={{ scale: 1.05, boxShadow: "0 20px 40px -10px rgba(234,179,8,0.4)" }}
               whileTap={{ scale: 0.98 }}
             >
               Gutachten anfragen
@@ -68,8 +69,8 @@ const HeroSection = () => (
             </motion.a>
             <motion.a
               href="tel:051112345678"
-              className="border-2 border-accent text-accent font-bold px-8 py-4 text-base uppercase tracking-wider flex items-center gap-2"
-              whileHover={{ scale: 1.05, backgroundColor: "rgba(212, 160, 23, 0.1)" }}
+              className="border-2 border-primary-foreground/30 text-primary-foreground font-bold px-10 py-4 text-base uppercase tracking-wider flex items-center gap-2 backdrop-blur-sm hover:border-accent hover:text-accent transition-colors"
+              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
             >
               <Phone className="h-5 w-5" />
@@ -84,7 +85,7 @@ const HeroSection = () => (
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 1.2 }}
-      className="relative bg-primary-dark/90 backdrop-blur-md border-t border-primary-foreground/10"
+      className="relative bg-primary-dark/80 backdrop-blur-xl border-t border-primary-foreground/10"
     >
       <div className="container-narrow px-4 py-5">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -94,10 +95,10 @@ const HeroSection = () => (
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 1.4 + i * 0.1 }}
-              className="flex items-center gap-3 text-primary-foreground"
+              className="flex items-center gap-3 text-primary-foreground group"
             >
-              <div className="gold-gradient p-2 flex-shrink-0">
-                <item.icon className="h-5 w-5 text-accent-foreground" />
+              <div className="gold-gradient p-2.5 flex-shrink-0 shadow-md group-hover:shadow-accent/30 transition-shadow">
+                <item.icon className="h-4 w-4 text-accent-foreground" />
               </div>
               <span className="text-sm font-semibold">{item.text}</span>
             </motion.div>
