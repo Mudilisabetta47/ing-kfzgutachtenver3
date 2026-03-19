@@ -52,7 +52,7 @@ const Footer = () => (
 
     <div className="border-t border-primary-foreground/10">
       <div className="container-narrow px-4 py-4 flex flex-wrap justify-between items-center gap-4 text-xs text-primary-foreground/40">
-        <span>© 2026 Kfz Gutachter Mustermann</span>
+        <span>© 2026 ING KFZ Gutachten</span>
         <div className="flex gap-4">
           <a href="#" className="hover:text-accent transition-colors">Impressum</a>
           <a href="#" className="hover:text-accent transition-colors">Datenschutz</a>
