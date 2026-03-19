@@ -22,9 +22,9 @@ const ContactSection = () => {
         <div className="grid md:grid-cols-2 gap-12">
           <div>
             {submitted ? (
-              <div className="bg-green-50 border border-green-200 rounded p-8 text-center">
-                <p className="text-green-800 font-semibold text-lg mb-2">Vielen Dank für Ihre Anfrage!</p>
-                <p className="text-green-700">Wir melden uns schnellstmöglich bei Ihnen.</p>
+              <div className="bg-secondary border border-accent/30 rounded p-8 text-center">
+                <p className="text-foreground font-semibold text-lg mb-2">Vielen Dank für Ihre Anfrage!</p>
+                <p className="text-muted-foreground">Wir melden uns schnellstmöglich bei Ihnen.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
