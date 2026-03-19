@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
+import logoImg from "@/assets/logo-ing.png";
 
 const navItems = [
   { label: "Start", href: "#start" },
