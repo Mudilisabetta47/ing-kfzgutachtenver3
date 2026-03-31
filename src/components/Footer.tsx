@@ -50,7 +50,7 @@ const Footer = () => (
         {/* Company Info */}
         <div className="lg:col-span-2">
           <Link to="/" className="inline-block mb-5" aria-label="ING KFZ Gutachten Startseite">
-            <img src={logoImg} alt="ING KFZ Gutachten Braunschweig – Logo" className="h-12 brightness-0 invert" width={180} height={48} />
+            <img src={logoImg} alt="ING KFZ Gutachten Braunschweig – Logo" className="h-12" width={180} height={48} />
           </Link>
           <p className="text-primary-foreground/50 text-sm leading-relaxed mb-5 font-body" itemProp="description">
             ING Kfz Gutachten – Ihr unabhängiger und zertifizierter Kfz-Sachverständiger in Braunschweig.
