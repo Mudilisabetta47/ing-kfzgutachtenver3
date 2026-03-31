@@ -137,7 +137,7 @@ const Header = () => {
               <Phone className="h-4 w-4" />
             </a>
             <Link
-              to="/kontakt"
+              to="/schaden-melden"
               className="gold-gradient text-accent-foreground font-bold text-xs px-6 py-2.5 uppercase tracking-wider hover:brightness-110 transition-all"
             >
               Schaden melden
