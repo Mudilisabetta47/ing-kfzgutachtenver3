@@ -22,6 +22,7 @@ import KontaktPage from "./pages/KontaktPage";
 import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
 import NotFound from "./pages/NotFound";
+import SchadenMelden from "./pages/SchadenMelden";
 
 const queryClient = new QueryClient();
 
