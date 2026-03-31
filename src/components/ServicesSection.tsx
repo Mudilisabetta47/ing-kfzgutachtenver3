@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Car, Truck, Zap, Bike, Award, Wrench } from "lucide-react";
-import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 import imgUnfall from "@/assets/service-unfallgutachten.jpg";
 import imgSchaden from "@/assets/service-schadengutachten.jpg";
@@ -10,48 +9,42 @@ import imgLeasing from "@/assets/service-leasing.jpg";
 import imgBeweis from "@/assets/service-beweissicherung.jpg";
 
 const services = [
-  { icon: Car, title: "Unfallgutachten", desc: "Unfallgutachten für z.B. Parkschäden und Auffahrunfälle", img: imgUnfall, href: "/haftpflichtschaden" },
-  { icon: Wrench, title: "Kostenvoranschlag", desc: "Kostenvoranschlag für Kasko- oder Bagatellschäden", img: imgSchaden, href: "/kostenvoranschlag" },
-  { icon: Award, title: "Fahrzeugbewertung", desc: "Fahrzeugbewertung und Oldtimerbewertung", img: imgBewertung, href: "/wertgutachten" },
-  { icon: Truck, title: "LKW Gutachten", desc: "Fachgerechte Gutachten für Lkw und Nutzfahrzeuge", img: imgOldtimer, href: "/lkw-gutachten" },
-  { icon: Zap, title: "E-Auto & Hybrid", desc: "Begutachtung moderner Elektro- und Hybridfahrzeuge", img: imgLeasing, href: "/gutachter-elektro-hybrid" },
-  { icon: Bike, title: "Motorrad Gutachten", desc: "Gutachten für Motorräder, Roller und Krafträder", img: imgBeweis, href: "/motorrad-gutachten" },
+  { title: "Unfallgutachten", desc: "Für Parkschäden, Auffahrunfälle und alle Haftpflichtschäden", img: imgUnfall, href: "/haftpflichtschaden" },
+  { title: "Kostenvoranschlag", desc: "Für Kasko- oder Bagatellschäden unter 1.000 €", img: imgSchaden, href: "/kostenvoranschlag" },
+  { title: "Fahrzeugbewertung", desc: "Wertgutachten für Kauf, Verkauf und Versicherung", img: imgBewertung, href: "/wertgutachten" },
+  { title: "LKW Gutachten", desc: "Fachgerechte Gutachten für Nutzfahrzeuge aller Art", img: imgOldtimer, href: "/lkw-gutachten" },
+  { title: "E-Auto & Hybrid", desc: "Spezialwissen für Hochvolt-Systeme und Akkutechnik", img: imgLeasing, href: "/gutachter-elektro-hybrid" },
+  { title: "Motorrad Gutachten", desc: "Gutachten für Motorräder, Roller und Krafträder", img: imgBeweis, href: "/motorrad-gutachten" },
 ];
 
 const ServicesSection = () => (
-  <section id="leistungen" className="section-padding bg-secondary overflow-hidden">
-    <div className="container-narrow">
+  <section id="leistungen" className="py-16 md:py-24 bg-secondary">
+    <div className="max-w-6xl mx-auto px-4">
       <ScrollReveal>
-        <div className="text-center mb-16">
-          <span className="text-accent font-bold text-sm tracking-[0.2em] uppercase">Unsere Gutachten</span>
-          <h2 className="font-heading text-4xl md:text-6xl text-foreground mt-3">Unsere Leistungen</h2>
-          <div className="section-divider" />
-        </div>
+        <h2 className="font-heading text-3xl md:text-4xl text-foreground tracking-wide mb-2">Unsere Leistungen</h2>
+        <p className="text-muted-foreground text-sm font-body mb-10">Gutachten für alle Fahrzeugtypen und Schadensarten.</p>
       </ScrollReveal>
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {services.map((s, i) => (
-          <ScrollReveal key={s.title} delay={i * 0.1}>
-            <motion.div whileHover={{ scale: 1.03 }} transition={{ duration: 0.3 }}>
-              <Link
-                to={s.href}
-                className="group relative h-[320px] overflow-hidden block rounded-2xl shadow-lg"
-              >
-                <img src={s.img} alt={s.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/95 via-primary/50 to-transparent group-hover:from-primary-dark transition-all duration-500" />
-                <div className="absolute top-5 left-5">
-                  <div className="gold-gradient w-12 h-12 rounded-xl flex items-center justify-center shadow-lg">
-                    <s.icon className="h-6 w-6 text-accent-foreground" />
-                  </div>
-                </div>
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="font-heading text-2xl text-primary-foreground mb-2">{s.title}</h3>
-                  <p className="text-primary-foreground/60 text-sm leading-relaxed">{s.desc}</p>
-                  <span className="inline-flex items-center gap-2 text-accent text-sm font-bold tracking-wide mt-3 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                    Mehr erfahren <ArrowRight className="h-4 w-4" />
-                  </span>
-                </div>
-              </Link>
-            </motion.div>
+
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {services.map((s) => (
+          <ScrollReveal key={s.title}>
+            <Link to={s.href} className="group block overflow-hidden rounded-lg bg-card border border-border hover:border-primary/25 transition-colors">
+              <div className="h-[180px] overflow-hidden">
+                <img
+                  src={s.img}
+                  alt={`${s.title} – ING Kfz Gutachten Braunschweig`}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-5">
+                <h3 className="font-heading text-xl text-foreground mb-1 tracking-wide">{s.title}</h3>
+                <p className="text-muted-foreground text-sm font-body mb-3">{s.desc}</p>
+                <span className="text-primary text-sm font-semibold font-body inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                  Mehr erfahren <ArrowRight className="h-3.5 w-3.5" />
+                </span>
+              </div>
+            </Link>
           </ScrollReveal>
         ))}
       </div>
