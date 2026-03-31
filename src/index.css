@@ -71,7 +71,7 @@
 
 @layer components {
   .section-padding {
-    @apply py-20 md:py-28 px-4;
+    @apply py-16 md:py-24 px-4;
   }
   .container-narrow {
     @apply max-w-6xl mx-auto;
@@ -82,10 +82,7 @@
   .blue-gradient {
     background: linear-gradient(160deg, hsl(217 80% 15%), hsl(217 69% 28%));
   }
-  .glass-card {
-    @apply bg-card/80 backdrop-blur-md border border-border/50 shadow-lg rounded-2xl;
-  }
   .section-divider {
-    @apply w-16 h-1 gold-gradient mx-auto mt-4 rounded-full;
+    @apply w-12 h-0.5 bg-primary mx-auto mt-3;
   }
 }
