@@ -1,6 +1,6 @@
-import TopBar from "@/components/TopBar";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
+import QuickActions from "@/components/QuickActions";
 import UnfallCTASection from "@/components/UnfallCTASection";
 import IntroSection from "@/components/IntroSection";
 import ProcessSection from "@/components/ProcessSection";
@@ -15,16 +15,16 @@ import Footer from "@/components/Footer";
 
 const Index = () => (
   <div className="min-h-screen">
-    <TopBar />
     <Header />
     <HeroSection />
-    <UnfallCTASection />
+    <QuickActions />
     <IntroSection />
-    <ProcessSection />
     <ServicesSection />
+    <ProcessSection />
+    <UnfallCTASection />
+    <USPSection />
     <TestimonialsSection />
     <InfoSection />
-    <USPSection />
     <RegionSection />
     <FAQSection />
     <ContactSection />

@@ -3,77 +3,66 @@ import aboutImg from "@/assets/about-gutachter.jpg";
 import ScrollReveal from "./ScrollReveal";
 
 const IntroSection = () => (
-  <section id="ueber-uns" className="py-16 md:py-24 bg-background">
-    <div className="max-w-6xl mx-auto px-4">
-      <div className="grid lg:grid-cols-5 gap-12 items-start">
-        {/* Text – 3 cols */}
-        <div className="lg:col-span-3">
-          <ScrollReveal>
-            <h2 className="font-heading text-3xl md:text-4xl text-foreground tracking-wide mb-6">
-              Warum ING Kfz Gutachten Braunschweig
+  <section id="ueber-uns" className="py-20 md:py-28 bg-background">
+    <div className="max-w-7xl mx-auto px-4">
+      <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <ScrollReveal>
+          <div>
+            <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-3 font-body">Über uns</p>
+            <h2 className="font-heading text-3xl md:text-5xl text-foreground tracking-wide mb-6">
+              Warum ING Kfz Gutachten
             </h2>
-            <p className="text-muted-foreground leading-relaxed mb-5 font-body">
+            <p className="text-muted-foreground leading-relaxed mb-4 font-body text-[15px]">
               Sie hatten einen Unfall und benötigen ein professionelles Kfz-Wert- oder Schadengutachten?
               Dann stehen wir Ihnen als verlässlicher Kfz-Gutachter in Braunschweig von der Erstellung eines
-              Kfz-Gutachtens, Kurzgutachtens, Kostenvoranschlages bis hin zur Restwertermittlung zur Verfügung.
+              Kfz-Gutachtens bis hin zur Restwertermittlung zur Verfügung.
             </p>
-            <p className="text-muted-foreground leading-relaxed mb-5 font-body">
-              Als Geschädigter unterstützen wir Sie dabei, die exakte Höhe der anfallenden Reparaturkosten
-              zu ermitteln. Sie erhalten detaillierte Informationen darüber, welche Forderungen Ihnen
-              für den Schadenersatz zustehen und wie sich diese zusammensetzen.
-            </p>
-            <p className="text-muted-foreground leading-relaxed mb-8 font-body">
+            <p className="text-muted-foreground leading-relaxed mb-8 font-body text-[15px]">
               Unsere Gutachter sind zertifiziert und wir sind empfohlener Gutachter vom
               Deutschen Gutachter und Sachverständigen Verband e.V. (DGSV).
             </p>
 
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+              {[
+                "Kfz-Gutachten mit Begleitung",
+                "Abstimmung mit Ihrer Werkstatt",
+                "24h Erreichbarkeit",
+                "Direkte Versicherungsabrechnung",
+                "Kostenlose Vor-Ort-Besichtigung",
+                "Gutachten in 1–2 Werktagen",
+              ].map((p, i) => (
+                <div key={i} className="flex items-start gap-2.5">
+                  <CheckCircle className="h-4 w-4 text-accent flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground text-sm font-body">{p}</span>
+                </div>
+              ))}
+            </div>
+
             <a
               href="tel:053122436430"
-              className="gold-gradient text-accent-foreground font-bold px-7 py-3 rounded-md inline-flex items-center gap-2 text-sm"
+              className="gold-gradient text-accent-foreground font-bold px-7 py-3 inline-flex items-center gap-2 text-sm uppercase tracking-wider"
             >
               <Phone className="h-4 w-4" />
-              Jetzt Termin vereinbaren
+              Termin vereinbaren
             </a>
-          </ScrollReveal>
-        </div>
+          </div>
+        </ScrollReveal>
 
-        {/* Image – 2 cols */}
-        <div className="lg:col-span-2">
-          <ScrollReveal>
+        <ScrollReveal>
+          <div className="relative">
             <img
               src={aboutImg}
               alt="ING KFZ Gutachten – Sachverständiger bei der Arbeit in Braunschweig"
-              className="w-full h-[360px] object-cover rounded-lg"
+              className="w-full h-[450px] object-cover"
               loading="lazy"
             />
-          </ScrollReveal>
-        </div>
-      </div>
-
-      {/* Bullet points */}
-      <ScrollReveal>
-        <div className="mt-14 border-t border-border pt-10">
-          <h3 className="font-heading text-2xl text-foreground mb-5 tracking-wide">
-            Unsere Leistungen für Sie:
-          </h3>
-          <div className="grid md:grid-cols-2 gap-x-10 gap-y-3">
-            {[
-              "Fundierte Kfz-Gutachten mit direkter Begleitung durch den Schadenprozess",
-              "Abstimmung des Schadenprozesses mit Ihrer Werkstatt",
-              "Rund um die Uhr erreichbar",
-              "Direkte Abrechnung mit der gegnerischen Versicherung",
-              "Kostenlose Anfahrt und Besichtigung vor Ort",
-              "Gutachten innerhalb von 1–2 Werktagen",
-              "Kostenvoranschläge für Kasko- oder Bagatellschäden",
-            ].map((point, i) => (
-              <div key={i} className="flex items-start gap-3 py-2">
-                <CheckCircle className="h-4 w-4 text-primary flex-shrink-0 mt-1" />
-                <span className="text-foreground text-sm font-body">{point}</span>
-              </div>
-            ))}
+            <div className="absolute bottom-0 right-0 bg-primary text-primary-foreground p-6">
+              <span className="font-heading text-4xl block">10+</span>
+              <span className="text-xs uppercase tracking-wider text-primary-foreground/70 font-body">Jahre Erfahrung</span>
+            </div>
           </div>
-        </div>
-      </ScrollReveal>
+        </ScrollReveal>
+      </div>
     </div>
   </section>
 );

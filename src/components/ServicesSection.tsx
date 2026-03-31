@@ -18,30 +18,35 @@ const services = [
 ];
 
 const ServicesSection = () => (
-  <section id="leistungen" className="py-16 md:py-24 bg-secondary">
-    <div className="max-w-6xl mx-auto px-4">
+  <section id="leistungen" className="py-20 md:py-28 bg-secondary/50">
+    <div className="max-w-7xl mx-auto px-4">
       <ScrollReveal>
-        <h2 className="font-heading text-3xl md:text-4xl text-foreground tracking-wide mb-2">Unsere Leistungen</h2>
-        <p className="text-muted-foreground text-sm font-body mb-10">Gutachten für alle Fahrzeugtypen und Schadensarten.</p>
+        <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-3 font-body">Was wir bieten</p>
+        <h2 className="font-heading text-3xl md:text-5xl text-foreground tracking-wide mb-12">Unsere Leistungen</h2>
       </ScrollReveal>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        {services.map((s) => (
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-0 border border-border">
+        {services.map((s, i) => (
           <ScrollReveal key={s.title}>
-            <Link to={s.href} className="group block overflow-hidden rounded-lg bg-card border border-border hover:border-primary/25 transition-colors">
-              <div className="h-[180px] overflow-hidden">
+            <Link
+              to={s.href}
+              className={`group block relative overflow-hidden bg-card hover:bg-primary/[0.02] transition-colors ${
+                i < services.length - 1 ? "border-b md:border-b lg:border-b-0 border-border" : ""
+              } ${(i + 1) % 3 !== 0 ? "lg:border-r border-border" : ""} ${(i + 1) % 2 !== 0 ? "md:border-r border-border" : ""}`}
+            >
+              <div className="h-[200px] overflow-hidden">
                 <img
                   src={s.img}
                   alt={`${s.title} – ING Kfz Gutachten Braunschweig`}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   loading="lazy"
                 />
               </div>
-              <div className="p-5">
-                <h3 className="font-heading text-xl text-foreground mb-1 tracking-wide">{s.title}</h3>
-                <p className="text-muted-foreground text-sm font-body mb-3">{s.desc}</p>
-                <span className="text-primary text-sm font-semibold font-body inline-flex items-center gap-1 group-hover:gap-2 transition-all">
-                  Mehr erfahren <ArrowRight className="h-3.5 w-3.5" />
+              <div className="p-6">
+                <h3 className="font-heading text-xl text-foreground mb-2 tracking-wide">{s.title}</h3>
+                <p className="text-muted-foreground text-sm font-body mb-4 leading-relaxed">{s.desc}</p>
+                <span className="text-primary text-xs font-semibold font-body uppercase tracking-wider inline-flex items-center gap-1.5 group-hover:gap-3 transition-all">
+                  Details <ArrowRight className="h-3 w-3" />
                 </span>
               </div>
             </Link>
