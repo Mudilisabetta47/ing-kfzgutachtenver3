@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import ScrollReveal from "./ScrollReveal";
 
 const usps = [
-  { icon: Star, title: "15 Jahre Erfahrung", desc: "Seit über 15 Jahren unabhängige Kfz-Gutachten in Hannover." },
+  { icon: Star, title: "10+ Jahre Erfahrung", desc: "Seit über zehn Jahren unabhängige Kfz-Gutachten in Braunschweig." },
   { icon: Shield, title: "100% Unabhängig", desc: "Wir arbeiten ausschließlich im Interesse der Geschädigten." },
   { icon: MapPin, title: "Vor-Ort-Service", desc: "Wir kommen zu Ihnen – egal ob Zuhause, Werkstatt oder Arbeitsplatz." },
   { icon: FileCheck, title: "Kostenübernahme", desc: "Die gegnerische Versicherung trägt in der Regel die Gutachterkosten." },

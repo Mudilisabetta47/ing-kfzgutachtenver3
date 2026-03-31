@@ -3,9 +3,10 @@ import { motion } from "framer-motion";
 import ScrollReveal from "./ScrollReveal";
 
 const locations = [
-  "Hannover-Mitte", "List / Oststadt", "Linden", "Döhren / Wülfel",
-  "Bothfeld / Isernhagen-Süd", "Misburg / Anderten", "Laatzen",
-  "Langenhagen", "Garbsen", "Seelze", "Wunstorf", "Pattensen",
+  "Braunschweig-Mitte", "Weststadt", "Östliches Ringgebiet", "Lehndorf",
+  "Stöckheim", "Rüningen", "Mascherode", "Volkmarode",
+  "Salzgitter", "Wolfsburg", "Gifhorn", "Peine",
+  "Wolfenbüttel", "Helmstedt", "Goslar", "Königslutter",
 ];
 
 const RegionSection = () => (
@@ -14,10 +15,10 @@ const RegionSection = () => (
       <ScrollReveal>
         <div className="text-center mb-12">
           <span className="text-primary font-bold text-sm uppercase tracking-[0.2em]">Einzugsgebiet</span>
-          <h2 className="font-heading text-4xl md:text-5xl text-foreground mt-3">Ihr Gutachter vor Ort in Hannover & Umgebung</h2>
+          <h2 className="font-heading text-4xl md:text-5xl text-foreground mt-3">Ihr Gutachter vor Ort in Braunschweig & Umgebung</h2>
           <div className="section-divider" />
           <p className="text-muted-foreground mt-6 max-w-2xl mx-auto">
-            Wir sind in ganz Hannover und der Region für Sie unterwegs. Schnell, zuverlässig und unabhängig.
+            Wir sind in ganz Braunschweig, Salzgitter, Wolfsburg und der gesamten Region für Sie unterwegs. Schnell, zuverlässig und unabhängig.
           </p>
         </div>
       </ScrollReveal>

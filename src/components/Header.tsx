@@ -8,26 +8,35 @@ const navItems = [
   { label: "Start", href: "/" },
   {
     label: "Gutachten",
-    href: "/kfz-gutachten",
     children: [
-      { label: "PKW Gutachten", href: "/kfz-gutachten" },
-      { label: "LKW Gutachten", href: "/lkw-gutachten" },
-      { label: "E-Auto & Hybrid", href: "/gutachter-elektro-hybrid" },
-      { label: "Motorrad Gutachten", href: "/motorrad-gutachten" },
-      { label: "Oldtimer Gutachten", href: "/oldtimer-gutachten" },
-      { label: "Bagatellschäden", href: "/bagatellschaeden" },
+      { label: "Unfall-Gutachten", href: "/haftpflichtschaden" },
+      { label: "Kostenvoranschlag", href: "/kostenvoranschlag" },
+      { label: "Wertgutachten", href: "/wertgutachten" },
+      { label: "Kfz Gutachter", href: "/der-kfz-gutachter" },
     ],
   },
-  { label: "Über uns", href: "/#ueber-uns" },
-  { label: "Ablauf", href: "/#ablauf" },
-  { label: "FAQ", href: "/#faq" },
-  { label: "Kontakt", href: "/kontakt" },
+  {
+    label: "Elektromobilität",
+    children: [
+      { label: "Gutachten Elektroauto", href: "/gutachter-elektro-hybrid" },
+    ],
+  },
+  {
+    label: "Infos",
+    children: [
+      { label: "Unabhängiger Kfz Gutachter", href: "/der-kfz-gutachter" },
+      { label: "Ihre Rechte", href: "/ihre-rechte" },
+      { label: "Nutzungsausfall", href: "/nutzungsausfall" },
+      { label: "Reparaturbestätigung", href: "/reparaturbestaetigung" },
+    ],
+  },
+  { label: "Anfahrt", href: "/anfahrt" },
 ];
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -38,15 +47,8 @@ const Header = () => {
 
   useEffect(() => {
     setMobileOpen(false);
-    setDropdownOpen(false);
+    setOpenDropdown(null);
   }, [location]);
-
-  const NavLink = ({ href, children, className }: { href: string; children: React.ReactNode; className?: string }) => {
-    if (href.startsWith("/#")) {
-      return <a href={href} className={className}>{children}</a>;
-    }
-    return <Link to={href} className={className}>{children}</Link>;
-  };
 
   return (
     <motion.header
@@ -68,8 +70,8 @@ const Header = () => {
               <div
                 key={item.label}
                 className="relative"
-                onMouseEnter={() => setDropdownOpen(true)}
-                onMouseLeave={() => setDropdownOpen(false)}
+                onMouseEnter={() => setOpenDropdown(item.label)}
+                onMouseLeave={() => setOpenDropdown(null)}
               >
                 <button className="relative px-4 py-2 text-sm font-semibold text-foreground hover:text-primary transition-colors tracking-wide group flex items-center gap-1">
                   {item.label}
@@ -77,13 +79,13 @@ const Header = () => {
                   <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform origin-left rounded-full" />
                 </button>
                 <AnimatePresence>
-                  {dropdownOpen && (
+                  {openDropdown === item.label && (
                     <motion.div
                       initial={{ opacity: 0, y: 8 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 8 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 mt-1 bg-card border border-border rounded-xl shadow-xl py-2 min-w-[220px] z-50"
+                      className="absolute top-full left-0 mt-1 bg-card border border-border rounded-xl shadow-xl py-2 min-w-[240px] z-50"
                     >
                       {item.children.map((child) => (
                         <Link
@@ -99,14 +101,14 @@ const Header = () => {
                 </AnimatePresence>
               </div>
             ) : (
-              <NavLink
-                key={item.href}
-                href={item.href}
+              <Link
+                key={item.label}
+                to={item.href!}
                 className="relative px-4 py-2 text-sm font-semibold text-foreground hover:text-primary transition-colors tracking-wide group"
               >
                 {item.label}
                 <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform origin-left rounded-full" />
-              </NavLink>
+              </Link>
             )
           )}
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}>
@@ -115,7 +117,7 @@ const Header = () => {
               className="ml-4 gold-gradient text-accent-foreground font-bold text-sm px-7 py-3 rounded-lg flex items-center gap-2 hover:brightness-110 transition-all tracking-wide shadow-lg shadow-accent/20"
             >
               <Phone className="h-4 w-4" />
-              Jetzt anfragen
+              Schaden melden
             </Link>
           </motion.div>
         </nav>
@@ -146,20 +148,14 @@ const Header = () => {
                     ))}
                   </>
                 ) : (
-                  item.href.startsWith("/#") ? (
-                    <a href={item.href} className="block py-3.5 text-sm font-bold text-foreground border-b border-border/50 tracking-wide" onClick={() => setMobileOpen(false)}>
-                      {item.label}
-                    </a>
-                  ) : (
-                    <Link to={item.href} className="block py-3.5 text-sm font-bold text-foreground border-b border-border/50 tracking-wide" onClick={() => setMobileOpen(false)}>
-                      {item.label}
-                    </Link>
-                  )
+                  <Link to={item.href!} className="block py-3.5 text-sm font-bold text-foreground border-b border-border/50 tracking-wide" onClick={() => setMobileOpen(false)}>
+                    {item.label}
+                  </Link>
                 )}
               </div>
             ))}
             <Link to="/kontakt" className="mt-4 block text-center gold-gradient text-accent-foreground font-bold text-sm px-6 py-3.5 rounded-lg tracking-wide" onClick={() => setMobileOpen(false)}>
-              Jetzt anfragen
+              Schaden melden
             </Link>
           </motion.div>
         )}

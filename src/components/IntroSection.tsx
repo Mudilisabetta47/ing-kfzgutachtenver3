@@ -5,16 +5,16 @@ import ScrollReveal from "./ScrollReveal";
 import { useCounter } from "@/hooks/useCounter";
 
 const highlights = [
-  "Zertifizierter Sachverständiger",
-  "Über 15 Jahre Erfahrung",
-  "Kostenloser Vor-Ort-Service in ganz Hannover",
+  "Zertifizierter Sachverständiger (DGSV)",
+  "Über 10 Jahre Erfahrung",
+  "Kostenloser Vor-Ort-Service in Braunschweig & Umgebung",
   "100% unabhängig & versicherungsungebunden",
-  "Achsvermessung & Karosserievermessung",
+  "Gutachten für PKW, LKW, Elektro & Hybrid",
 ];
 
 const stats = [
   { target: 2500, suffix: "+", label: "Gutachten erstellt" },
-  { target: 15, suffix: "+", label: "Jahre Erfahrung" },
+  { target: 10, suffix: "+", label: "Jahre Erfahrung" },
   { target: 24, suffix: "h", label: "Terminfindung" },
 ];
 
@@ -35,7 +35,7 @@ const IntroSection = () => (
         <div className="text-center mb-16">
           <span className="text-primary font-bold text-sm uppercase tracking-[0.2em]">Über uns</span>
           <h2 className="font-heading text-4xl md:text-5xl text-foreground mt-3">
-            Professionelle KFZ Gutachten – 100% neutral
+            Unabhängiger KFZ-Gutachter für Schadensbewertung
           </h2>
           <div className="section-divider" />
         </div>
@@ -45,12 +45,12 @@ const IntroSection = () => (
         <ScrollReveal direction="left">
           <div className="relative">
             <div className="relative overflow-hidden shadow-2xl rounded-2xl">
-              <img src={aboutImg} alt="ING KFZ Gutachten Team" className="w-full h-[520px] object-cover" />
+              <img src={aboutImg} alt="ING KFZ Gutachten Braunschweig" className="w-full h-[520px] object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
             </div>
             <div className="absolute -bottom-6 -right-6 gold-gradient p-6 rounded-2xl hidden md:block shadow-2xl">
               <div className="text-center">
-                <span className="font-heading text-5xl text-accent-foreground">15+</span>
+                <span className="font-heading text-5xl text-accent-foreground">10+</span>
                 <span className="block text-xs font-bold text-accent-foreground uppercase tracking-widest mt-1">Jahre</span>
               </div>
             </div>
@@ -60,12 +60,12 @@ const IntroSection = () => (
         <ScrollReveal direction="right" delay={0.2}>
           <div>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Nach einem Unfall oder der Beschädigung des eigenen Fahrzeugs durch Dritte liegen die Nerven oft blank. 
-              Zur sicheren Durchsetzung eigener Forderungen ist ein qualifiziertes Gutachten unerlässlich.
+              In den Straßen von Braunschweig kommt es täglich zu zahlreichen Verkehrsunfällen. Wenn Sie unverschuldet in einen Verkehrsunfall verwickelt wurden, 
+              begleiten wir Sie bei der Schadensabwicklung. Das Hauptaufgabengebiet unserer Kfz Gutachter ist die Erstellung von Schadensgutachten für Ihr beschädigtes Kraftfahrzeug.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Wir als <strong className="text-foreground">unabhängiger Gutachter</strong> in Hannover nehmen stets den gesamten 
-              Sachverhalt in Augenschein und beziehen auch die Wertminderung in die Berechnung der Schadenshöhe mit ein.
+              Sie hatten einen Unfall im Raum <strong className="text-foreground">Braunschweig, Salzgitter oder Wolfsburg</strong>? Dann sind Sie bei ING Kfz Gutachter genau richtig. 
+              Unsere Gutachter sind allesamt zertifiziert und wir sind empfohlener Gutachter vom Deutschen Gutachter und Sachverständigen Verband e.V. (DGSV).
             </p>
             <div className="space-y-3 mb-8">
               {highlights.map((h, i) => (

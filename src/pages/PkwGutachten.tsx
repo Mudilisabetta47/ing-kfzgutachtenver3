@@ -8,7 +8,7 @@ const PkwGutachten = () => (
     subtitle="Unfallgutachten für Personenkraftwagen – vom Kleinwagen bis zum Transporter"
     heroImage={imgUnfall}
     icon={Car}
-    intro="Nach einem Verkehrsunfall ist ein professionelles Kfz-Gutachten die Grundlage für die vollständige Durchsetzung Ihrer Schadenersatzansprüche. Als unabhängiger Sachverständiger in Hannover erstellen wir detaillierte, gerichtsfeste Gutachten für alle PKW-Typen."
+    intro="Nach einem Verkehrsunfall ist ein professionelles Kfz-Gutachten die Grundlage für die vollständige Durchsetzung Ihrer Schadenersatzansprüche. Als unabhängiger Sachverständiger in Braunschweig erstellen wir detaillierte, gerichtsfeste Gutachten für alle PKW-Typen."
     details={[
       "Wir dokumentieren den gesamten Schadenumfang Ihres Fahrzeugs und berechnen die Reparaturkosten nach den Vorgaben der Fahrzeughersteller. Dabei berücksichtigen wir sämtliche Positionen wie Ersatzteile, Arbeitszeit, Lackierung und notwendige Zusatzarbeiten.",
       "Neben den reinen Reparaturkosten ermitteln wir auch die merkantile Wertminderung Ihres Fahrzeugs. Diese entsteht, weil ein reparierter Unfallwagen am Markt weniger wert ist als ein unfallfreies Fahrzeug gleichen Alters und Zustands.",
@@ -19,7 +19,7 @@ const PkwGutachten = () => (
       "Ermittlung der Reparaturkosten nach Herstellervorgaben",
       "Berechnung der merkantilen Wertminderung",
       "Ermittlung von Nutzungsausfall bzw. Mietwagenkosten",
-      "Kostenloser Vor-Ort-Service in Hannover und Umgebung",
+      "Kostenloser Vor-Ort-Service in Braunschweig und Umgebung",
       "Im Haftpflichtfall für Sie als Geschädigten kostenfrei",
     ]}
   />

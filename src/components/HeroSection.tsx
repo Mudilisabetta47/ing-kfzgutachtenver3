@@ -23,7 +23,7 @@ const HeroSection = () => (
             className="inline-flex items-center gap-2 bg-accent/20 backdrop-blur-sm border border-accent/30 rounded-full px-5 py-2 mb-8"
           >
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-            <span className="text-accent text-sm font-semibold tracking-wide">Ihr unabhängiger Sachverständiger in Hannover</span>
+            <span className="text-accent text-sm font-semibold tracking-wide">Kfz Gutachter und Sachverständiger Braunschweig</span>
           </motion.div>
 
           <motion.h1
@@ -34,7 +34,7 @@ const HeroSection = () => (
           >
             KFZ Gutachter
             <br />
-            <span className="text-accent">Hannover</span>
+            <span className="text-accent">Braunschweig</span>
           </motion.h1>
 
           <motion.p
@@ -43,8 +43,8 @@ const HeroSection = () => (
             transition={{ duration: 0.6, delay: 0.7 }}
             className="text-primary-foreground/75 text-lg md:text-xl mb-12 max-w-xl leading-relaxed"
           >
-            Ihr unabhängiger Partner im Schadenfall, schnell und zuverlässig!
-            Unfallgutachten, Schadengutachten und Fahrzeugbewertungen – für Ihren vollen Schadenersatz.
+            Ihr unabhängiger Partner im Schadenfall – schnell und zuverlässig.
+            Kostenlose Beratung für Ihren Schadensfall in Braunschweig, Salzgitter und Wolfsburg.
           </motion.p>
 
           <motion.div
@@ -59,17 +59,17 @@ const HeroSection = () => (
               whileHover={{ scale: 1.05, boxShadow: "0 20px 40px -10px rgba(234,179,8,0.4)" }}
               whileTap={{ scale: 0.98 }}
             >
-              Jetzt kostenloses Gutachten anfordern
+              Jetzt Schaden melden!
               <ChevronRight className="h-5 w-5" />
             </motion.a>
             <motion.a
-              href="tel:051154300976"
+              href="tel:053122436430"
               className="border-2 border-primary-foreground/25 text-primary-foreground font-semibold px-8 py-4 text-base flex items-center gap-2 backdrop-blur-sm hover:border-accent hover:text-accent transition-all rounded-lg"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
             >
               <Phone className="h-5 w-5" />
-              0511 - 543 00 976
+              0531 - 22 436 430
             </motion.a>
           </motion.div>
         </div>
