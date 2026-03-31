@@ -19,7 +19,7 @@ const PkwGutachten = () => (
       "Ermittlung der Reparaturkosten nach Herstellervorgaben",
       "Berechnung der merkantilen Wertminderung",
       "Ermittlung von Nutzungsausfall bzw. Mietwagenkosten",
-      "Kostenloser Vor-Ort-Service in Hannover und Umgebung",
+      "Kostenloser Vor-Ort-Service in Braunschweig und Umgebung",
       "Im Haftpflichtfall für Sie als Geschädigten kostenfrei",
     ]}
   />
