@@ -22,6 +22,7 @@ import KontaktPage from "./pages/KontaktPage";
 import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
 import NotFound from "./pages/NotFound";
+import SchadenMelden from "./pages/SchadenMelden";
 
 const queryClient = new QueryClient();
 
@@ -48,6 +49,7 @@ const App = () => (
           <Route path="/reparaturbestaetigung" element={<Layout><Reparaturbestaetigung /></Layout>} />
           <Route path="/anfahrt" element={<Layout><Anfahrt /></Layout>} />
           <Route path="/kontakt" element={<Layout><KontaktPage /></Layout>} />
+          <Route path="/schaden-melden" element={<SchadenMelden />} />
           <Route path="/impressum" element={<Layout><Impressum /></Layout>} />
           <Route path="/datenschutz" element={<Layout><Datenschutz /></Layout>} />
           <Route path="*" element={<NotFound />} />
