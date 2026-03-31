@@ -22,19 +22,19 @@ const TestimonialsSection = () => (
         {testimonials.map((t, i) => (
           <ScrollReveal key={t.name} delay={i * 0.15}>
             <motion.div
-              className="bg-card p-8 relative h-full border-b-4 border-primary hover:border-accent transition-colors duration-300"
-              whileHover={{ y: -5, boxShadow: "0 25px 50px -15px rgba(0,0,0,0.12)" }}
+              className="bg-card p-8 rounded-2xl relative h-full border border-border hover:shadow-xl hover:border-primary/20 transition-all duration-300"
+              whileHover={{ y: -5 }}
               transition={{ duration: 0.3 }}
             >
-              <Quote className="h-10 w-10 text-primary/10 absolute top-6 right-6" />
+              <Quote className="h-10 w-10 text-primary/8 absolute top-6 right-6" />
               <div className="flex gap-1 mb-5">
                 {Array.from({ length: 5 }).map((_, j) => (
                   <Star key={j} className="h-5 w-5 fill-accent text-accent" />
                 ))}
               </div>
-              <p className="text-muted-foreground leading-relaxed mb-6 italic">„{t.text}"</p>
+              <p className="text-muted-foreground leading-relaxed mb-6 italic">&bdquo;{t.text}&ldquo;</p>
               <div className="flex items-center gap-3">
-                <div className="w-11 h-11 bg-primary flex items-center justify-center">
+                <div className="w-11 h-11 bg-primary rounded-xl flex items-center justify-center">
                   <span className="font-heading text-primary-foreground text-lg">{t.name[0]}</span>
                 </div>
                 <div>

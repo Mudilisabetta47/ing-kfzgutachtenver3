@@ -10,15 +10,15 @@ const Footer = () => (
             <img src={logoImg} alt="ING KFZ Gutachten" className="h-10 brightness-0 invert" />
           </div>
           <p className="text-primary-foreground/60 text-sm leading-relaxed mb-6">
-            Ihr unabhängiger Sachverständiger in Hannover für Unfallgutachten, Fahrzeugbewertungen und mehr.
+            Ihr unabhängiger Sachverständiger in Hannover für Unfallgutachten, Fahrzeugbewertungen und mehr. Zertifiziert und unabhängig seit über 15 Jahren.
           </p>
-          <div className="w-12 h-1 gold-gradient" />
+          <div className="w-12 h-1 gold-gradient rounded-full" />
         </div>
 
         <div>
           <h4 className="font-heading text-xl mb-5 text-accent">Navigation</h4>
           <ul className="space-y-2">
-            {["Start", "Leistungen", "Über uns", "Ablauf", "FAQ", "Kontakt"].map((l) => (
+            {["Start", "Gutachten", "Über uns", "Ablauf", "FAQ", "Kontakt"].map((l) => (
               <li key={l}>
                 <a href={`#${l.toLowerCase().replace("ü", "ue").replace(" ", "-")}`} className="text-primary-foreground/60 text-sm hover:text-accent transition-colors flex items-center gap-1">
                   <ChevronRight className="h-3 w-3 text-accent/60" /> {l}
@@ -31,9 +31,10 @@ const Footer = () => (
         <div>
           <h4 className="font-heading text-xl mb-5 text-accent">Kontakt</h4>
           <ul className="space-y-3 text-sm text-primary-foreground/60">
-            <li className="flex items-center gap-2"><Phone className="h-4 w-4 text-accent" /><a href="tel:051112345678" className="hover:text-accent transition-colors">0511 / 12345678</a></li>
-            <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-accent" /><a href="mailto:info@gutachter-hannover.de" className="hover:text-accent transition-colors">info@gutachter-hannover.de</a></li>
-            <li className="flex items-center gap-2"><MapPin className="h-4 w-4 text-accent" />Hannover und Region</li>
+            <li className="flex items-center gap-2"><Phone className="h-4 w-4 text-accent" /><a href="tel:051154300976" className="hover:text-accent transition-colors">0511 - 543 00 976</a></li>
+            <li className="flex items-center gap-2"><Phone className="h-4 w-4 text-accent" /><a href="tel:017372979763" className="hover:text-accent transition-colors">0173 - 72 79 763</a></li>
+            <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-accent" /><a href="mailto:info@ing-gutachten.de" className="hover:text-accent transition-colors">info@ing-gutachten.de</a></li>
+            <li className="flex items-center gap-2"><MapPin className="h-4 w-4 text-accent" />Hildesheimer Str. 229, 30519 Hannover</li>
           </ul>
         </div>
 
@@ -44,7 +45,7 @@ const Footer = () => (
             <li>Sa: nach Vereinbarung</li>
             <li>So: geschlossen</li>
           </ul>
-          <a href="#kontakt" className="mt-6 inline-block gold-gradient text-accent-foreground font-bold text-xs px-5 py-2.5 uppercase tracking-wider hover:brightness-110 transition-all shadow-md">
+          <a href="#kontakt" className="mt-6 inline-block gold-gradient text-accent-foreground font-bold text-xs px-5 py-2.5 rounded-lg tracking-wide hover:brightness-110 transition-all shadow-md">
             Termin anfragen
           </a>
         </div>
@@ -53,10 +54,11 @@ const Footer = () => (
 
     <div className="border-t border-primary-foreground/10">
       <div className="container-narrow px-4 py-4 flex flex-wrap justify-between items-center gap-4 text-xs text-primary-foreground/40">
-        <span>© 2026 ING KFZ Gutachten – Alle Rechte vorbehalten</span>
+        <span>&copy; 2026 ING Gutachten – Alle Rechte vorbehalten</span>
         <div className="flex gap-4">
           <a href="#" className="hover:text-accent transition-colors">Impressum</a>
           <a href="#" className="hover:text-accent transition-colors">Datenschutz</a>
+          <a href="#" className="hover:text-accent transition-colors">Cookie-Richtlinie</a>
         </div>
       </div>
     </div>

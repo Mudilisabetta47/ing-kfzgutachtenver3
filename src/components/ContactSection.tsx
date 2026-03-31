@@ -12,12 +12,12 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="kontakt" className="section-padding bg-background overflow-hidden">
+    <section id="kontakt" className="section-padding bg-card overflow-hidden">
       <div className="container-narrow">
         <ScrollReveal>
           <div className="text-center mb-16">
             <span className="text-primary font-bold text-sm uppercase tracking-[0.2em]">Kontakt</span>
-            <h2 className="font-heading text-4xl md:text-6xl text-foreground mt-3">Jetzt anfragen</h2>
+            <h2 className="font-heading text-4xl md:text-6xl text-foreground mt-3">Jetzt Gutachten anfragen</h2>
             <div className="section-divider" />
           </div>
         </ScrollReveal>
@@ -29,7 +29,7 @@ const ContactSection = () => {
                 <motion.div
                   initial={{ scale: 0.9, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
-                  className="bg-primary/5 border-l-4 border-primary p-8 text-center"
+                  className="bg-primary/5 border border-primary/20 rounded-2xl p-8 text-center"
                 >
                   <CheckCircle className="h-12 w-12 text-primary mx-auto mb-4" />
                   <p className="font-heading text-2xl text-foreground mb-2">Anfrage erhalten!</p>
@@ -39,38 +39,38 @@ const ContactSection = () => {
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-bold text-foreground mb-2 uppercase tracking-wider">Name *</label>
-                      <input type="text" required className="w-full border border-input bg-card px-4 py-3.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all" placeholder="Ihr Name" />
+                      <label className="block text-xs font-semibold text-foreground mb-2 tracking-wide">Name *</label>
+                      <input type="text" required className="w-full border border-input bg-background rounded-lg px-4 py-3.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all" placeholder="Ihr Name" />
                     </div>
                     <div>
-                      <label className="block text-xs font-bold text-foreground mb-2 uppercase tracking-wider">Telefon *</label>
-                      <input type="tel" required className="w-full border border-input bg-card px-4 py-3.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all" placeholder="Telefonnummer" />
+                      <label className="block text-xs font-semibold text-foreground mb-2 tracking-wide">Telefon *</label>
+                      <input type="tel" required className="w-full border border-input bg-background rounded-lg px-4 py-3.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all" placeholder="Telefonnummer" />
                     </div>
                   </div>
                   <div>
-                    <label className="block text-xs font-bold text-foreground mb-2 uppercase tracking-wider">E-Mail</label>
-                    <input type="email" className="w-full border border-input bg-card px-4 py-3.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all" placeholder="Ihre E-Mail-Adresse" />
+                    <label className="block text-xs font-semibold text-foreground mb-2 tracking-wide">E-Mail</label>
+                    <input type="email" className="w-full border border-input bg-background rounded-lg px-4 py-3.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all" placeholder="Ihre E-Mail-Adresse" />
                   </div>
                   <div>
-                    <label className="block text-xs font-bold text-foreground mb-2 uppercase tracking-wider">Leistung</label>
-                    <select className="w-full border border-input bg-card px-4 py-3.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all text-muted-foreground">
+                    <label className="block text-xs font-semibold text-foreground mb-2 tracking-wide">Leistung</label>
+                    <select className="w-full border border-input bg-background rounded-lg px-4 py-3.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all text-muted-foreground">
                       <option value="">Bitte wählen...</option>
-                      <option>Unfallgutachten</option>
-                      <option>Schadengutachten</option>
-                      <option>Fahrzeugbewertung</option>
-                      <option>Oldtimerbewertung</option>
-                      <option>Leasing-Rückgabe</option>
-                      <option>Beweissicherung</option>
+                      <option>PKW Gutachten</option>
+                      <option>LKW Gutachten</option>
+                      <option>E-Auto & Hybrid</option>
+                      <option>Motorrad Gutachten</option>
+                      <option>Oldtimer Gutachten</option>
+                      <option>Bagatellschäden</option>
                       <option>Sonstiges</option>
                     </select>
                   </div>
                   <div>
-                    <label className="block text-xs font-bold text-foreground mb-2 uppercase tracking-wider">Nachricht *</label>
-                    <textarea required rows={4} className="w-full border border-input bg-card px-4 py-3.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all resize-none" placeholder="Beschreiben Sie kurz Ihr Anliegen…" />
+                    <label className="block text-xs font-semibold text-foreground mb-2 tracking-wide">Nachricht *</label>
+                    <textarea required rows={4} className="w-full border border-input bg-background rounded-lg px-4 py-3.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all resize-none" placeholder="Beschreiben Sie kurz Ihr Anliegen..." />
                   </div>
                   <motion.button
                     type="submit"
-                    className="w-full bg-primary text-primary-foreground font-bold py-4 text-base uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-shadow"
+                    className="w-full gold-gradient text-accent-foreground font-bold py-4 text-base tracking-wide rounded-lg flex items-center justify-center gap-2 shadow-lg shadow-accent/20 hover:shadow-xl transition-shadow"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
@@ -85,32 +85,39 @@ const ContactSection = () => {
 
           <ScrollReveal direction="right" delay={0.2}>
             <div className="space-y-6">
-              <div className="blue-gradient p-8 text-primary-foreground shadow-xl">
-                <h3 className="font-heading text-2xl mb-6">ING KFZ Gutachten</h3>
+              <div className="blue-gradient p-8 text-primary-foreground shadow-xl rounded-2xl">
+                <h3 className="font-heading text-2xl mb-6">ING Gutachten</h3>
                 <div className="space-y-5">
-                  <a href="tel:051112345678" className="flex items-center gap-4 hover:text-accent transition-colors group">
-                    <div className="gold-gradient w-11 h-11 flex items-center justify-center flex-shrink-0 shadow-md"><Phone className="h-5 w-5 text-accent-foreground" /></div>
+                  <a href="tel:051154300976" className="flex items-center gap-4 hover:text-accent transition-colors group">
+                    <div className="gold-gradient w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md"><Phone className="h-5 w-5 text-accent-foreground" /></div>
                     <div>
-                      <span className="font-bold text-lg block">0511 / 12345678</span>
-                      <span className="text-primary-foreground/50 text-xs">Jetzt anrufen</span>
+                      <span className="font-bold text-lg block">0511 - 543 00 976</span>
+                      <span className="text-primary-foreground/50 text-xs">Festnetz</span>
                     </div>
                   </a>
-                  <a href="mailto:info@gutachter-hannover.de" className="flex items-center gap-4 hover:text-accent transition-colors">
-                    <div className="gold-gradient w-11 h-11 flex items-center justify-center flex-shrink-0 shadow-md"><Mail className="h-5 w-5 text-accent-foreground" /></div>
+                  <a href="tel:017372979763" className="flex items-center gap-4 hover:text-accent transition-colors group">
+                    <div className="gold-gradient w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md"><Phone className="h-5 w-5 text-accent-foreground" /></div>
                     <div>
-                      <span className="block">info@gutachter-hannover.de</span>
+                      <span className="font-bold text-lg block">0173 - 72 79 763</span>
+                      <span className="text-primary-foreground/50 text-xs">Mobil</span>
+                    </div>
+                  </a>
+                  <a href="mailto:info@ing-gutachten.de" className="flex items-center gap-4 hover:text-accent transition-colors">
+                    <div className="gold-gradient w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md"><Mail className="h-5 w-5 text-accent-foreground" /></div>
+                    <div>
+                      <span className="block">info@ing-gutachten.de</span>
                       <span className="text-primary-foreground/50 text-xs">E-Mail schreiben</span>
                     </div>
                   </a>
                   <div className="flex items-center gap-4">
-                    <div className="gold-gradient w-11 h-11 flex items-center justify-center flex-shrink-0 shadow-md"><MapPin className="h-5 w-5 text-accent-foreground" /></div>
+                    <div className="gold-gradient w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md"><MapPin className="h-5 w-5 text-accent-foreground" /></div>
                     <div>
-                      <span className="block">Hannover und Region</span>
-                      <span className="text-primary-foreground/50 text-xs">Vor-Ort-Service</span>
+                      <span className="block">Hildesheimer Str. 229</span>
+                      <span className="text-primary-foreground/50 text-xs">30519 Hannover</span>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
-                    <div className="gold-gradient w-11 h-11 flex items-center justify-center flex-shrink-0 shadow-md"><Clock className="h-5 w-5 text-accent-foreground" /></div>
+                    <div className="gold-gradient w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md"><Clock className="h-5 w-5 text-accent-foreground" /></div>
                     <div>
                       <p>Mo – Fr: 08:00 – 18:00</p>
                       <p className="text-primary-foreground/50 text-xs">Sa: nach Vereinbarung</p>
@@ -119,7 +126,7 @@ const ContactSection = () => {
                 </div>
               </div>
               <motion.div
-                className="border-2 border-primary bg-primary/5 p-6"
+                className="border-2 border-primary/20 bg-primary/5 p-6 rounded-2xl"
                 whileHover={{ borderColor: "hsl(45, 100%, 50%)" }}
               >
                 <h4 className="font-heading text-xl text-foreground mb-2 flex items-center gap-2">

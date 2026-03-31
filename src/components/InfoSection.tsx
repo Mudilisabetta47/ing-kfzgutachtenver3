@@ -6,7 +6,7 @@ const sections = [
   { icon: Users, title: "Wer zahlt das Gutachten?", text: "Die Kosten trägt der Schadenverursacher. Im Haftpflichtschadenfall können Sie davon ausgehen, dass Sie die Gebühren vom Unfallgegner bzw. von dessen Versicherung erstattet bekommen." },
   { icon: HelpCircle, title: "Was tun nach einem Unfall?", text: "Unfallstelle sichern, Schaden dokumentieren, Daten austauschen. Dann zeitnah einen unabhängigen Gutachter beauftragen. Bei unverschuldeten Unfällen trägt die gegnerische Versicherung die Kosten." },
   { icon: FileText, title: "Wann brauche ich ein Gutachten?", text: "Ab einer Schadenshöhe von ca. 750–1.000 € ist ein Gutachten sinnvoll. Es dokumentiert Schadenshöhe, Reparaturweg, Minderwert, Nutzungsausfall und Mietwagenkosten." },
-  { icon: Award, title: "Was ist eine merkantile Wertminderung?", text: "Die merkantile Wertminderung ist der Wertverlust Ihres Fahrzeugs, der trotz fachgerechter Reparatur bestehen bleibt, weil es nun als „Unfallwagen" gilt. Sie steht Ihnen bei unverschuldeten Unfällen zu." },
+  { icon: Award, title: "Was ist eine merkantile Wertminderung?", text: "Die merkantile Wertminderung ist der Wertverlust Ihres Fahrzeugs, der trotz fachgerechter Reparatur bestehen bleibt, weil es nun als 'Unfallwagen' gilt. Sie steht Ihnen bei unverschuldeten Unfällen zu." },
 ];
 
 const InfoSection = () => (
