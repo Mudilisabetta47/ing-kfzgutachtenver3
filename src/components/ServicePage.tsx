@@ -73,13 +73,9 @@ const ServicePage = ({ title, subtitle, heroImage, icon: Icon, intro, details, b
               <div className="blue-gradient p-6 rounded-2xl text-primary-foreground shadow-xl">
                 <h3 className="font-heading text-xl mb-4">Schnell & unkompliziert</h3>
                 <p className="text-primary-foreground/60 text-sm mb-6">Rufen Sie uns an oder nutzen Sie unser Kontaktformular. Wir melden uns umgehend.</p>
-                <a href="tel:051154300976" className="flex items-center gap-3 mb-3 hover:text-accent transition-colors">
+                <a href="tel:053122436430" className="flex items-center gap-3 mb-3 hover:text-accent transition-colors">
                   <Phone className="h-5 w-5 text-accent" />
-                  <span className="font-bold">0511 - 543 00 976</span>
-                </a>
-                <a href="tel:017372979763" className="flex items-center gap-3 hover:text-accent transition-colors">
-                  <Phone className="h-5 w-5 text-accent" />
-                  <span className="font-bold">0173 - 72 79 763</span>
+                  <span className="font-bold">0531 - 22 436 430</span>
                 </a>
               </div>
             </ScrollReveal>
