@@ -178,7 +178,7 @@ const Header = () => {
                 )}
               </div>
             ))}
-            <Link to="/kontakt" className="mt-4 block text-center gold-gradient text-accent-foreground font-bold text-sm px-6 py-3 uppercase tracking-wide" onClick={() => setMobileOpen(false)}>
+            <Link to="/schaden-melden" className="mt-4 block text-center gold-gradient text-accent-foreground font-bold text-sm px-6 py-3 uppercase tracking-wide" onClick={() => setMobileOpen(false)}>
               Schaden melden
             </Link>
           </motion.div>
