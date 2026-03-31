@@ -227,10 +227,9 @@ const SchadenMelden = () => {
                         <button
                           type="button"
                           onClick={() => setStep(2)}
-                          className="gold-gradient text-accent-foreground font-bold px-10 py-3.5 text-sm uppercase tracking-wider inline-flex items-center gap-2"
+                          className="w-full sm:w-auto gold-gradient text-accent-foreground font-bold px-8 sm:px-10 py-3.5 text-sm uppercase tracking-wider inline-flex items-center justify-center gap-2"
                         >
-                          Weiter
-                          <span>→</span>
+                          Weiter <span>→</span>
                         </button>
                       </div>
                     </ScrollReveal>
