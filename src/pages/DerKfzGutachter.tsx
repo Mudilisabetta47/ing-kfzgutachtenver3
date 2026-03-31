@@ -6,20 +6,20 @@ import aboutImg from "@/assets/about-gutachter.jpg";
 
 const DerKfzGutachter = () => (
   <>
-    <section className="relative h-[50vh] min-h-[400px] flex items-end overflow-hidden">
+    <section className="relative h-[45vh] min-h-[380px] flex items-end overflow-hidden">
       <img src={aboutImg} alt="Kfz Gutachter Braunschweig" className="absolute inset-0 w-full h-full object-cover" />
       <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/95 via-primary/60 to-primary-dark/30" />
-      <div className="relative container-narrow px-4 pb-12">
-        <nav className="flex items-center gap-2 text-primary-foreground/50 text-sm mb-6">
+      <div className="relative w-full max-w-6xl mx-auto px-4 pb-12">
+        <nav className="flex items-center gap-2 text-primary-foreground/60 text-sm mb-4 font-body">
           <Link to="/" className="hover:text-accent transition-colors">Start</Link>
-          <ChevronRight className="h-3.5 w-3.5" />
-          <Link to="/" className="hover:text-accent transition-colors">Gutachten</Link>
-          <ChevronRight className="h-3.5 w-3.5" />
-          <span className="text-accent">Kfz Gutachter</span>
+          <ChevronRight className="h-3 w-3" />
+          <span className="text-primary-foreground/40">Gutachten</span>
+          <ChevronRight className="h-3 w-3" />
+          <span className="text-accent font-medium">Kfz Gutachter</span>
         </nav>
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-          <h1 className="font-heading text-4xl md:text-6xl text-primary-foreground mb-3">Unabhängiger Kfz Gutachter</h1>
-          <p className="text-primary-foreground/70 text-lg max-w-2xl">Ihr zertifizierter Sachverständiger in Braunschweig und Umgebung</p>
+          <h1 className="font-heading text-5xl md:text-7xl text-primary-foreground tracking-wide mb-2">Unabhängiger Kfz Gutachter</h1>
+          <p className="text-primary-foreground/60 text-base max-w-xl font-body">Ihr zertifizierter Sachverständiger in Braunschweig und Umgebung</p>
         </motion.div>
       </div>
     </section>
