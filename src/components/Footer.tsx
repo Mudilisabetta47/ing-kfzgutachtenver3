@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, ChevronRight } from "lucide-react";
 import logoImg from "@/assets/logo-ing.png";
 
@@ -16,13 +17,20 @@ const Footer = () => (
         </div>
 
         <div>
-          <h4 className="font-heading text-xl mb-5 text-accent">Navigation</h4>
+          <h4 className="font-heading text-xl mb-5 text-accent">Gutachten</h4>
           <ul className="space-y-2">
-            {["Start", "Gutachten", "Über uns", "Ablauf", "FAQ", "Kontakt"].map((l) => (
-              <li key={l}>
-                <a href={`#${l.toLowerCase().replace("ü", "ue").replace(" ", "-")}`} className="text-primary-foreground/60 text-sm hover:text-accent transition-colors flex items-center gap-1">
-                  <ChevronRight className="h-3 w-3 text-accent/60" /> {l}
-                </a>
+            {[
+              { label: "PKW Gutachten", href: "/kfz-gutachten" },
+              { label: "LKW Gutachten", href: "/lkw-gutachten" },
+              { label: "E-Auto & Hybrid", href: "/gutachter-elektro-hybrid" },
+              { label: "Motorrad", href: "/motorrad-gutachten" },
+              { label: "Oldtimer", href: "/oldtimer-gutachten" },
+              { label: "Bagatellschäden", href: "/bagatellschaeden" },
+            ].map((l) => (
+              <li key={l.href}>
+                <Link to={l.href} className="text-primary-foreground/60 text-sm hover:text-accent transition-colors flex items-center gap-1">
+                  <ChevronRight className="h-3 w-3 text-accent/60" /> {l.label}
+                </Link>
               </li>
             ))}
           </ul>
@@ -45,9 +53,9 @@ const Footer = () => (
             <li>Sa: nach Vereinbarung</li>
             <li>So: geschlossen</li>
           </ul>
-          <a href="#kontakt" className="mt-6 inline-block gold-gradient text-accent-foreground font-bold text-xs px-5 py-2.5 rounded-lg tracking-wide hover:brightness-110 transition-all shadow-md">
+          <Link to="/kontakt" className="mt-6 inline-block gold-gradient text-accent-foreground font-bold text-xs px-5 py-2.5 rounded-lg tracking-wide hover:brightness-110 transition-all shadow-md">
             Termin anfragen
-          </a>
+          </Link>
         </div>
       </div>
     </div>
@@ -56,9 +64,8 @@ const Footer = () => (
       <div className="container-narrow px-4 py-4 flex flex-wrap justify-between items-center gap-4 text-xs text-primary-foreground/40">
         <span>&copy; 2026 ING Gutachten – Alle Rechte vorbehalten</span>
         <div className="flex gap-4">
-          <a href="#" className="hover:text-accent transition-colors">Impressum</a>
-          <a href="#" className="hover:text-accent transition-colors">Datenschutz</a>
-          <a href="#" className="hover:text-accent transition-colors">Cookie-Richtlinie</a>
+          <Link to="/impressum" className="hover:text-accent transition-colors">Impressum</Link>
+          <Link to="/datenschutz" className="hover:text-accent transition-colors">Datenschutz</Link>
         </div>
       </div>
     </div>
