@@ -1,49 +1,50 @@
-import { Phone, CheckCircle, ChevronDown } from "lucide-react";
+import { Phone, CheckCircle, ArrowRight } from "lucide-react";
 import heroImg from "@/assets/hero-gutachter.jpg";
 
-const checkpoints = [
-  "Ihr Kfz-Sachverständigenbüro für Braunschweig und Umgebung",
-  "Unabhängig, sachlich und fundiert",
-  "Kostenfreie Vor-Ort-Besichtigung Ihres Fahrzeugs",
-  "Direkte Abrechnung mit der Versicherung des Schadenverursachers",
-];
-
 const HeroSection = () => (
-  <section id="start" className="relative min-h-[92vh] flex flex-col">
+  <section id="start" className="relative h-[85vh] min-h-[550px] max-h-[800px]">
+    {/* Background */}
     <div className="absolute inset-0">
       <img src={heroImg} alt="Kfz-Gutachter bei der Fahrzeugbegutachtung in Braunschweig" className="w-full h-full object-cover" />
-      <div className="absolute inset-0 bg-gradient-to-r from-primary-dark/90 via-primary/65 to-primary/20" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
     </div>
 
-    <div className="relative flex-1 flex items-center">
-      <div className="max-w-6xl mx-auto w-full px-4 py-20 md:py-28">
-        <div className="max-w-2xl">
-          <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl text-primary-foreground leading-[1.05] mb-8 tracking-wide">
+    {/* Floating card */}
+    <div className="relative h-full flex items-center">
+      <div className="max-w-7xl mx-auto w-full px-4">
+        <div className="bg-card/95 backdrop-blur-sm p-8 md:p-12 max-w-lg shadow-2xl">
+          <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4 font-body">Kfz-Sachverständigenbüro Braunschweig</p>
+          <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl text-foreground leading-[1.05] mb-5 tracking-wide">
             Kfz Gutachter Braunschweig
           </h1>
-          <p className="text-primary-foreground/80 text-lg md:text-xl mb-8 font-body leading-relaxed">
+          <p className="text-muted-foreground text-sm md:text-base mb-6 font-body leading-relaxed">
             Ihr unabhängiger Partner im Schadenfall – schnell, zuverlässig und immer auf Ihrer Seite.
           </p>
 
-          <ul className="space-y-3 mb-10">
-            {checkpoints.map((cp, i) => (
-              <li key={i} className="flex items-start gap-3">
-                <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
-                <span className="text-primary-foreground/85 text-sm md:text-base font-body">{cp}</span>
+          <ul className="space-y-2 mb-8">
+            {[
+              "Kostenfreie Vor-Ort-Besichtigung",
+              "Direkte Abrechnung mit der Versicherung",
+              "Gutachten innerhalb 24 Stunden",
+            ].map((cp, i) => (
+              <li key={i} className="flex items-center gap-2.5">
+                <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
+                <span className="text-foreground text-sm font-body">{cp}</span>
               </li>
             ))}
           </ul>
 
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-col sm:flex-row gap-3">
             <a
               href="#kontakt"
-              className="gold-gradient text-accent-foreground font-bold px-8 py-3.5 text-sm tracking-wide inline-flex items-center gap-2 rounded-md"
+              className="gold-gradient text-accent-foreground font-bold px-7 py-3 text-sm tracking-wide inline-flex items-center justify-center gap-2 uppercase"
             >
-              Jetzt Schaden melden
+              Schaden melden
+              <ArrowRight className="h-4 w-4" />
             </a>
             <a
               href="tel:053122436430"
-              className="border border-primary-foreground/30 text-primary-foreground font-medium px-8 py-3.5 text-sm inline-flex items-center gap-2 rounded-md hover:border-accent hover:text-accent transition-colors"
+              className="border border-border text-foreground font-medium px-7 py-3 text-sm inline-flex items-center justify-center gap-2 hover:border-primary hover:text-primary transition-colors"
             >
               <Phone className="h-4 w-4" />
               0531 - 22 436 430
@@ -51,12 +52,6 @@ const HeroSection = () => (
           </div>
         </div>
       </div>
-    </div>
-
-    <div className="absolute bottom-6 left-1/2 -translate-x-1/2">
-      <a href="#unfall" className="text-primary-foreground/30 hover:text-accent transition-colors">
-        <ChevronDown className="h-7 w-7 animate-bounce" />
-      </a>
     </div>
   </section>
 );

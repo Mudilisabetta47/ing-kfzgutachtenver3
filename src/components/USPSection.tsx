@@ -3,7 +3,7 @@ import ScrollReveal from "./ScrollReveal";
 
 const usps = [
   { icon: Star, title: "10+ Jahre Erfahrung", desc: "Seit über zehn Jahren unabhängige Kfz-Gutachten in Braunschweig." },
-  { icon: Shield, title: "100% Unabhängig", desc: "Wir arbeiten ausschließlich im Interesse der Geschädigten – nie für Versicherungen." },
+  { icon: Shield, title: "100% Unabhängig", desc: "Wir arbeiten ausschließlich im Interesse der Geschädigten." },
   { icon: MapPin, title: "Vor-Ort-Service", desc: "Wir kommen zu Ihnen – ob Zuhause, in der Werkstatt oder am Arbeitsplatz." },
   { icon: FileCheck, title: "Kostenübernahme", desc: "Die gegnerische Versicherung trägt in der Regel die Gutachterkosten." },
   { icon: Clock, title: "Schnelle Termine", desc: "Meist innerhalb von 24 Stunden, in dringenden Fällen noch am selben Tag." },
@@ -11,20 +11,22 @@ const usps = [
 ];
 
 const USPSection = () => (
-  <section className="py-16 md:py-24 bg-background">
-    <div className="max-w-6xl mx-auto px-4">
+  <section className="py-20 md:py-28 bg-background">
+    <div className="max-w-7xl mx-auto px-4">
       <ScrollReveal>
-        <h2 className="font-heading text-3xl md:text-4xl text-foreground tracking-wide mb-2">Ihre Vorteile</h2>
-        <p className="text-muted-foreground text-sm font-body mb-10">Warum Geschädigte in Braunschweig uns vertrauen.</p>
+        <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-3 font-body">Vorteile</p>
+        <h2 className="font-heading text-3xl md:text-5xl text-foreground tracking-wide mb-12">Ihre Vorteile</h2>
       </ScrollReveal>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border rounded-lg overflow-hidden border border-border">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-0 gap-y-0 border-t border-l border-border">
         {usps.map((u) => (
-          <div key={u.title} className="bg-card p-7">
-            <u.icon className="h-6 w-6 text-primary mb-4" />
-            <h3 className="font-heading text-lg text-foreground mb-1.5 tracking-wide">{u.title}</h3>
-            <p className="text-muted-foreground text-sm leading-relaxed font-body">{u.desc}</p>
-          </div>
+          <ScrollReveal key={u.title}>
+            <div className="border-b border-r border-border p-8 md:p-10 bg-card hover:bg-primary/[0.02] transition-colors">
+              <u.icon className="h-6 w-6 text-accent mb-5" />
+              <h3 className="font-heading text-lg text-foreground mb-2 tracking-wide">{u.title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed font-body">{u.desc}</p>
+            </div>
+          </ScrollReveal>
         ))}
       </div>
     </div>
