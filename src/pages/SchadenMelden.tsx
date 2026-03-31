@@ -513,17 +513,17 @@ const SchadenMelden = () => {
                         </label>
                       </div>
 
-                      <div className="flex justify-between items-center">
+                      <div className="flex flex-col-reverse sm:flex-row justify-between items-stretch sm:items-center gap-3">
                         <button
                           type="button"
                           onClick={() => setStep(3)}
-                          className="border border-border text-foreground font-medium px-8 py-3.5 text-sm uppercase tracking-wider hover:border-primary hover:text-primary transition-colors"
+                          className="w-full sm:w-auto border border-border text-foreground font-medium px-6 sm:px-8 py-3.5 text-sm uppercase tracking-wider hover:border-primary hover:text-primary transition-colors text-center"
                         >
                           ← Zurück
                         </button>
                         <button
                           type="submit"
-                          className="gold-gradient text-accent-foreground font-bold px-12 py-4 text-sm uppercase tracking-wider inline-flex items-center gap-3 shadow-lg shadow-accent/20"
+                          className="w-full sm:w-auto gold-gradient text-accent-foreground font-bold px-8 sm:px-12 py-4 text-sm uppercase tracking-wider inline-flex items-center justify-center gap-3 shadow-lg shadow-accent/20"
                         >
                           <Send className="h-4 w-4" />
                           Schaden jetzt melden
