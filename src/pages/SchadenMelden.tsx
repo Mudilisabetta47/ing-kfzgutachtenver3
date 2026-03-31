@@ -73,12 +73,12 @@ const SchadenMelden = () => {
       <Header />
       <main className="flex-1">
         {/* Hero banner */}
-        <section className="bg-primary-dark py-16 md:py-20">
+        <section className="bg-primary-dark py-10 sm:py-16 md:py-20">
           <div className="max-w-7xl mx-auto px-4">
-            <p className="text-xs uppercase tracking-[0.2em] text-primary-foreground/40 mb-3 font-body">
+            <p className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-primary-foreground/40 mb-2 sm:mb-3 font-body">
               Sofort-Meldung
             </p>
-            <h1 className="font-heading text-4xl md:text-6xl text-primary-foreground tracking-wide mb-4">
+            <h1 className="font-heading text-3xl sm:text-4xl md:text-6xl text-primary-foreground tracking-wide mb-3 sm:mb-4">
               Schaden melden
             </h1>
             <p className="text-primary-foreground/60 text-base md:text-lg font-body max-w-2xl">
