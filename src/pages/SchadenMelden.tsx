@@ -40,10 +40,10 @@ const serviceTypes = [
 ];
 
 const inputClass =
-  "w-full border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary font-body transition-colors";
-const labelClass = "block text-xs font-semibold text-foreground mb-1.5 font-body uppercase tracking-wider";
+  "w-full border border-input bg-background px-3 sm:px-4 py-3 text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary font-body transition-colors rounded-none";
+const labelClass = "block text-[10px] sm:text-xs font-semibold text-foreground mb-1.5 font-body uppercase tracking-wider";
 const selectClass =
-  "w-full border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary font-body text-foreground transition-colors appearance-none";
+  "w-full border border-input bg-background px-3 sm:px-4 py-3 text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary font-body text-foreground transition-colors appearance-none rounded-none";
 
 const SchadenMelden = () => {
   const [submitted, setSubmitted] = useState(false);
