@@ -4,6 +4,8 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 interface Props {
   children: ReactNode;
   className?: string;
+  delay?: number;
+  direction?: "up" | "left" | "right" | "none";
 }
 
 const ScrollReveal = ({ children, className = "" }: Props) => {

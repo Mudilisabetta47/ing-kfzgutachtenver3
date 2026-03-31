@@ -1,4 +1,4 @@
-import { Phone, Search, FileCheck } from "lucide-react";
+import { Phone } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 
 const steps = [
