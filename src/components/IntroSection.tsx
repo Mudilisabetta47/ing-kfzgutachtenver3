@@ -1,101 +1,94 @@
-import { CheckCircle, ArrowRight } from "lucide-react";
+import { CheckCircle, ArrowRight, Phone } from "lucide-react";
 import { motion } from "framer-motion";
 import aboutImg from "@/assets/about-gutachter.jpg";
 import ScrollReveal from "./ScrollReveal";
-import { useCounter } from "@/hooks/useCounter";
 
-const highlights = [
-  "Zertifizierter Sachverständiger (DGSV)",
-  "Über 10 Jahre Erfahrung",
-  "Kostenloser Vor-Ort-Service in Braunschweig & Umgebung",
-  "100% unabhängig & versicherungsungebunden",
-  "Gutachten für PKW, LKW, Elektro & Hybrid",
+const bulletPoints = [
+  "Technische Kompetenz, die überzeugt – wir erstellen fundierte Kfz-Gutachten und begleiten Sie sicher durch den Schadenprozess mit der Versicherung",
+  "Auf Wunsch stimmen wir den gesamten Schadenprozess direkt mit Ihrer Werkstatt ab",
+  "Unsere Experten sind rund um die Uhr für Sie erreichbar",
+  "Als Kfz-Gutachter rechnen wir direkt mit der Versicherung ab",
+  "Kostenlose Anfahrt und Besichtigung Ihres Schadens vor Ort",
+  "Innerhalb von 1–2 Tagen erhalten Sie das Gutachten für Ihr Fahrzeug",
+  "Unsere Gutachter erstellen Ihnen einen Kostenvoranschlag für Kasko- oder Bagatellschäden",
 ];
-
-const stats = [
-  { target: 2500, suffix: "+", label: "Gutachten erstellt" },
-  { target: 10, suffix: "+", label: "Jahre Erfahrung" },
-  { target: 24, suffix: "h", label: "Terminfindung" },
-];
-
-function StatCounter({ target, suffix, label }: { target: number; suffix: string; label: string }) {
-  const { ref, count } = useCounter(target);
-  return (
-    <div ref={ref} className="text-center p-6 bg-card rounded-2xl border border-border shadow-sm">
-      <span className="font-heading text-5xl md:text-6xl text-primary">{count}{suffix}</span>
-      <span className="block text-xs font-semibold text-muted-foreground uppercase tracking-widest mt-2">{label}</span>
-    </div>
-  );
-}
 
 const IntroSection = () => (
-  <section id="ueber-uns" className="section-padding bg-secondary overflow-hidden">
+  <section id="ueber-uns" className="section-padding bg-background overflow-hidden">
     <div className="container-narrow">
       <ScrollReveal>
-        <div className="text-center mb-16">
-          <span className="text-primary font-bold text-sm uppercase tracking-[0.2em]">Über uns</span>
+        <div className="text-center mb-6">
+          <span className="text-accent font-bold text-sm tracking-[0.2em] uppercase">Ihr unabhängiger Kfz-Sachverständiger</span>
           <h2 className="font-heading text-4xl md:text-5xl text-foreground mt-3">
-            Unabhängiger KFZ-Gutachter für Schadensbewertung
+            Warum ING Kfz Gutachten Braunschweig
           </h2>
           <div className="section-divider" />
         </div>
       </ScrollReveal>
 
-      <div className="grid md:grid-cols-2 gap-16 items-center">
+      <div className="grid lg:grid-cols-2 gap-16 items-start mt-12">
         <ScrollReveal direction="left">
-          <div className="relative">
-            <div className="relative overflow-hidden shadow-2xl rounded-2xl">
-              <img src={aboutImg} alt="ING KFZ Gutachten Braunschweig" className="w-full h-[520px] object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
-            </div>
-            <div className="absolute -bottom-6 -right-6 gold-gradient p-6 rounded-2xl hidden md:block shadow-2xl">
-              <div className="text-center">
-                <span className="font-heading text-5xl text-accent-foreground">10+</span>
-                <span className="block text-xs font-bold text-accent-foreground uppercase tracking-widest mt-1">Jahre</span>
-              </div>
-            </div>
+          <div>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              Sie hatten einen Unfall und benötigen ein professionelles Kfz-Wert- oder Schadengutachten?
+              Dann stehen wir Ihnen als verlässlicher Kfz-Gutachter in Braunschweig von der Erstellung eines
+              Kfz-Gutachtens, Kurzgutachtens, Kostenvoranschlages bis hin zur Restwertermittlung zur Verfügung.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              Als Geschädigter kann Sie ein Kfz-Gutachter in Braunschweig dabei unterstützen, die exakte Höhe
+              der anfallenden Reparaturkosten für Ihren Schaden zu ermitteln. Darüber hinaus erhalten Sie
+              detaillierte Informationen darüber, welche Forderungen Ihnen für den Schadenersatz zustehen.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              Als neutraler Kfz-Gutachter sind wir gerade für solche Situationen in Braunschweig qualifiziert
+              und ausgezeichnet. Unsere Gutachter sind zertifiziert und wir sind empfohlener Gutachter vom
+              Deutschen Gutachter und Sachverständigen Verband e.V. (DGSV).
+            </p>
+
+            <motion.a
+              href="tel:053122436430"
+              className="inline-flex items-center gap-3 gold-gradient text-accent-foreground font-bold px-8 py-4 rounded-xl shadow-lg shadow-accent/20 mb-10"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.97 }}
+            >
+              <Phone className="h-5 w-5" />
+              Jetzt Termin vereinbaren
+            </motion.a>
           </div>
         </ScrollReveal>
 
         <ScrollReveal direction="right" delay={0.2}>
-          <div>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              In den Straßen von Braunschweig kommt es täglich zu zahlreichen Verkehrsunfällen. Wenn Sie unverschuldet in einen Verkehrsunfall verwickelt wurden, 
-              begleiten wir Sie bei der Schadensabwicklung. Das Hauptaufgabengebiet unserer Kfz Gutachter ist die Erstellung von Schadensgutachten für Ihr beschädigtes Kraftfahrzeug.
-            </p>
-            <p className="text-muted-foreground leading-relaxed mb-8">
-              Sie hatten einen Unfall im Raum <strong className="text-foreground">Braunschweig, Salzgitter oder Wolfsburg</strong>? Dann sind Sie bei ING Kfz Gutachter genau richtig. 
-              Unsere Gutachter sind allesamt zertifiziert und wir sind empfohlener Gutachter vom Deutschen Gutachter und Sachverständigen Verband e.V. (DGSV).
-            </p>
-            <div className="space-y-3 mb-8">
-              {highlights.map((h, i) => (
-                <ScrollReveal key={h} delay={0.3 + i * 0.08}>
-                  <div className="flex items-center gap-3 group">
-                    <div className="w-7 h-7 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
-                      <CheckCircle className="h-4 w-4 text-primary-foreground" />
-                    </div>
-                    <span className="text-foreground font-medium text-sm">{h}</span>
-                  </div>
-                </ScrollReveal>
-              ))}
+          <div className="relative">
+            <div className="overflow-hidden rounded-2xl shadow-2xl">
+              <img src={aboutImg} alt="ING KFZ Gutachten Braunschweig" className="w-full h-[400px] object-cover" />
             </div>
-            <motion.a
-              href="#kontakt"
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-bold tracking-wide text-sm px-7 py-3.5 rounded-lg shadow-lg shadow-primary/20 hover:shadow-xl transition-shadow"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.97 }}
-            >
-              Jetzt kontaktieren <ArrowRight className="h-4 w-4" />
-            </motion.a>
           </div>
         </ScrollReveal>
       </div>
 
-      <div className="mt-20 grid grid-cols-3 gap-6">
-        {stats.map((s) => (
-          <StatCounter key={s.label} {...s} />
-        ))}
-      </div>
+      {/* Bullet points like Meisterwerk */}
+      <ScrollReveal delay={0.15}>
+        <div className="mt-16">
+          <h3 className="font-heading text-2xl text-foreground mb-6">
+            Als erfahrene Kfz-Gutachter stehen wir Ihnen in Braunschweig mit unserer Expertise zur Seite:
+          </h3>
+          <div className="space-y-4">
+            {bulletPoints.map((point, i) => (
+              <motion.div
+                key={i}
+                className="flex items-start gap-4 bg-secondary rounded-xl p-4 border border-border/50"
+                initial={{ opacity: 0, x: -10 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: i * 0.08 }}
+                viewport={{ once: true }}
+              >
+                <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                <span className="text-foreground text-sm leading-relaxed">{point}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </ScrollReveal>
     </div>
   </section>
 );
