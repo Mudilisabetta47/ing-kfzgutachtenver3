@@ -85,16 +85,16 @@ const SchadenMelden = () => {
               Füllen Sie das Formular aus und wir kümmern uns um alles Weitere.
               Bei unverschuldeten Unfällen entstehen Ihnen keine Kosten.
             </p>
-            <div className="mt-6 flex items-center gap-4">
+            <div className="mt-4 sm:mt-6 flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4">
               <a
                 href="tel:053122436430"
-                className="text-accent font-bold font-body flex items-center gap-2 hover:text-accent-hover transition-colors"
+                className="text-accent font-bold font-body flex items-center gap-2 hover:text-accent-hover transition-colors text-sm"
               >
                 <Phone className="h-4 w-4" />
                 0531 - 22 436 430
               </a>
-              <span className="text-primary-foreground/30">|</span>
-              <span className="text-primary-foreground/40 text-sm font-body">24h Erreichbar</span>
+              <span className="text-primary-foreground/30 hidden sm:inline">|</span>
+              <span className="text-primary-foreground/40 text-xs sm:text-sm font-body">24h Erreichbar</span>
             </div>
           </div>
         </section>
