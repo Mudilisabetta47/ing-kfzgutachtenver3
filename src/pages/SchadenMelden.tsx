@@ -140,7 +140,7 @@ const SchadenMelden = () => {
                         disabled={s.num > step}
                       >
                         <div
-                          className={`w-10 h-10 flex items-center justify-center text-sm font-bold transition-colors ${
+                          className={`w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center text-xs sm:text-sm font-bold transition-colors ${
                             s.num === step
                               ? "bg-primary text-primary-foreground"
                               : s.num < step
