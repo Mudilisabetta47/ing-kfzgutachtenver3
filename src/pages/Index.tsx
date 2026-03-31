@@ -12,6 +12,7 @@ import RegionSection from "@/components/RegionSection";
 import FAQSection from "@/components/FAQSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import StickyMobileCall from "@/components/StickyMobileCall";
 
 const Index = () => (
   <div className="min-h-screen">
@@ -29,6 +30,7 @@ const Index = () => (
     <FAQSection />
     <ContactSection />
     <Footer />
+    <StickyMobileCall />
   </div>
 );
 

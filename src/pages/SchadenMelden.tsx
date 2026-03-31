@@ -40,10 +40,10 @@ const serviceTypes = [
 ];
 
 const inputClass =
-  "w-full border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary font-body transition-colors";
-const labelClass = "block text-xs font-semibold text-foreground mb-1.5 font-body uppercase tracking-wider";
+  "w-full border border-input bg-background px-3 sm:px-4 py-3 text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary font-body transition-colors rounded-none";
+const labelClass = "block text-[10px] sm:text-xs font-semibold text-foreground mb-1.5 font-body uppercase tracking-wider";
 const selectClass =
-  "w-full border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary font-body text-foreground transition-colors appearance-none";
+  "w-full border border-input bg-background px-3 sm:px-4 py-3 text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary font-body text-foreground transition-colors appearance-none rounded-none";
 
 const SchadenMelden = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -73,35 +73,35 @@ const SchadenMelden = () => {
       <Header />
       <main className="flex-1">
         {/* Hero banner */}
-        <section className="bg-primary-dark py-16 md:py-20">
+        <section className="bg-primary-dark py-10 sm:py-16 md:py-20">
           <div className="max-w-7xl mx-auto px-4">
-            <p className="text-xs uppercase tracking-[0.2em] text-primary-foreground/40 mb-3 font-body">
+            <p className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-primary-foreground/40 mb-2 sm:mb-3 font-body">
               Sofort-Meldung
             </p>
-            <h1 className="font-heading text-4xl md:text-6xl text-primary-foreground tracking-wide mb-4">
+            <h1 className="font-heading text-3xl sm:text-4xl md:text-6xl text-primary-foreground tracking-wide mb-3 sm:mb-4">
               Schaden melden
             </h1>
-            <p className="text-primary-foreground/60 text-base md:text-lg font-body max-w-2xl">
+            <p className="text-primary-foreground/60 text-sm sm:text-base md:text-lg font-body max-w-2xl">
               Füllen Sie das Formular aus und wir kümmern uns um alles Weitere.
               Bei unverschuldeten Unfällen entstehen Ihnen keine Kosten.
             </p>
-            <div className="mt-6 flex items-center gap-4">
+            <div className="mt-4 sm:mt-6 flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4">
               <a
                 href="tel:053122436430"
-                className="text-accent font-bold font-body flex items-center gap-2 hover:text-accent-hover transition-colors"
+                className="text-accent font-bold font-body flex items-center gap-2 hover:text-accent-hover transition-colors text-sm"
               >
                 <Phone className="h-4 w-4" />
                 0531 - 22 436 430
               </a>
-              <span className="text-primary-foreground/30">|</span>
-              <span className="text-primary-foreground/40 text-sm font-body">24h Erreichbar</span>
+              <span className="text-primary-foreground/30 hidden sm:inline">|</span>
+              <span className="text-primary-foreground/40 text-xs sm:text-sm font-body">24h Erreichbar</span>
             </div>
           </div>
         </section>
 
         {/* Form section */}
-        <section className="py-12 md:py-20 bg-background">
-          <div className="max-w-4xl mx-auto px-4">
+        <section className="py-8 sm:py-12 md:py-20 bg-background">
+          <div className="max-w-4xl mx-auto px-3 sm:px-4">
             {submitted ? (
               <ScrollReveal>
                 <div className="text-center py-20">
@@ -122,8 +122,8 @@ const SchadenMelden = () => {
             ) : (
               <>
                 {/* Progress bar */}
-                <div className="mb-12">
-                  <div className="flex items-center justify-between mb-4">
+                <div className="mb-8 sm:mb-12">
+                  <div className="flex items-center justify-between mb-3 sm:mb-4">
                     {[
                       { num: 1, label: "Persönliche Daten", icon: User },
                       { num: 2, label: "Fahrzeugdaten", icon: Car },
@@ -140,7 +140,7 @@ const SchadenMelden = () => {
                         disabled={s.num > step}
                       >
                         <div
-                          className={`w-10 h-10 flex items-center justify-center text-sm font-bold transition-colors ${
+                          className={`w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center text-xs sm:text-sm font-bold transition-colors ${
                             s.num === step
                               ? "bg-primary text-primary-foreground"
                               : s.num < step
@@ -227,10 +227,9 @@ const SchadenMelden = () => {
                         <button
                           type="button"
                           onClick={() => setStep(2)}
-                          className="gold-gradient text-accent-foreground font-bold px-10 py-3.5 text-sm uppercase tracking-wider inline-flex items-center gap-2"
+                          className="w-full sm:w-auto gold-gradient text-accent-foreground font-bold px-8 sm:px-10 py-3.5 text-sm uppercase tracking-wider inline-flex items-center justify-center gap-2"
                         >
-                          Weiter
-                          <span>→</span>
+                          Weiter <span>→</span>
                         </button>
                       </div>
                     </ScrollReveal>
@@ -313,18 +312,18 @@ const SchadenMelden = () => {
                         </div>
                       </div>
 
-                      <div className="flex justify-between">
+                      <div className="flex flex-col-reverse sm:flex-row justify-between gap-3">
                         <button
                           type="button"
                           onClick={() => setStep(1)}
-                          className="border border-border text-foreground font-medium px-8 py-3.5 text-sm uppercase tracking-wider hover:border-primary hover:text-primary transition-colors"
+                          className="w-full sm:w-auto border border-border text-foreground font-medium px-6 sm:px-8 py-3.5 text-sm uppercase tracking-wider hover:border-primary hover:text-primary transition-colors text-center"
                         >
                           ← Zurück
                         </button>
                         <button
                           type="button"
                           onClick={() => setStep(3)}
-                          className="gold-gradient text-accent-foreground font-bold px-10 py-3.5 text-sm uppercase tracking-wider inline-flex items-center gap-2"
+                          className="w-full sm:w-auto gold-gradient text-accent-foreground font-bold px-8 sm:px-10 py-3.5 text-sm uppercase tracking-wider inline-flex items-center justify-center gap-2"
                         >
                           Weiter <span>→</span>
                         </button>
@@ -409,18 +408,18 @@ const SchadenMelden = () => {
                         />
                       </div>
 
-                      <div className="flex justify-between">
+                      <div className="flex flex-col-reverse sm:flex-row justify-between gap-3">
                         <button
                           type="button"
                           onClick={() => setStep(2)}
-                          className="border border-border text-foreground font-medium px-8 py-3.5 text-sm uppercase tracking-wider hover:border-primary hover:text-primary transition-colors"
+                          className="w-full sm:w-auto border border-border text-foreground font-medium px-6 sm:px-8 py-3.5 text-sm uppercase tracking-wider hover:border-primary hover:text-primary transition-colors text-center"
                         >
                           ← Zurück
                         </button>
                         <button
                           type="button"
                           onClick={() => setStep(4)}
-                          className="gold-gradient text-accent-foreground font-bold px-10 py-3.5 text-sm uppercase tracking-wider inline-flex items-center gap-2"
+                          className="w-full sm:w-auto gold-gradient text-accent-foreground font-bold px-8 sm:px-10 py-3.5 text-sm uppercase tracking-wider inline-flex items-center justify-center gap-2"
                         >
                           Weiter <span>→</span>
                         </button>
@@ -514,17 +513,17 @@ const SchadenMelden = () => {
                         </label>
                       </div>
 
-                      <div className="flex justify-between items-center">
+                      <div className="flex flex-col-reverse sm:flex-row justify-between items-stretch sm:items-center gap-3">
                         <button
                           type="button"
                           onClick={() => setStep(3)}
-                          className="border border-border text-foreground font-medium px-8 py-3.5 text-sm uppercase tracking-wider hover:border-primary hover:text-primary transition-colors"
+                          className="w-full sm:w-auto border border-border text-foreground font-medium px-6 sm:px-8 py-3.5 text-sm uppercase tracking-wider hover:border-primary hover:text-primary transition-colors text-center"
                         >
                           ← Zurück
                         </button>
                         <button
                           type="submit"
-                          className="gold-gradient text-accent-foreground font-bold px-12 py-4 text-sm uppercase tracking-wider inline-flex items-center gap-3 shadow-lg shadow-accent/20"
+                          className="w-full sm:w-auto gold-gradient text-accent-foreground font-bold px-8 sm:px-12 py-4 text-sm uppercase tracking-wider inline-flex items-center justify-center gap-3 shadow-lg shadow-accent/20"
                         >
                           <Send className="h-4 w-4" />
                           Schaden jetzt melden
