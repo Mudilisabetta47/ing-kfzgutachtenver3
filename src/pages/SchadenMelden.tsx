@@ -122,8 +122,8 @@ const SchadenMelden = () => {
             ) : (
               <>
                 {/* Progress bar */}
-                <div className="mb-12">
-                  <div className="flex items-center justify-between mb-4">
+                <div className="mb-8 sm:mb-12">
+                  <div className="flex items-center justify-between mb-3 sm:mb-4">
                     {[
                       { num: 1, label: "Persönliche Daten", icon: User },
                       { num: 2, label: "Fahrzeugdaten", icon: Car },
