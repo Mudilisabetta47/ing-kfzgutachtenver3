@@ -100,8 +100,8 @@ const SchadenMelden = () => {
         </section>
 
         {/* Form section */}
-        <section className="py-12 md:py-20 bg-background">
-          <div className="max-w-4xl mx-auto px-4">
+        <section className="py-8 sm:py-12 md:py-20 bg-background">
+          <div className="max-w-4xl mx-auto px-3 sm:px-4">
             {submitted ? (
               <ScrollReveal>
                 <div className="text-center py-20">
