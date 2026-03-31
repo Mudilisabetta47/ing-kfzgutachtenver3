@@ -79,7 +79,7 @@ const Header = () => {
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
           <Link to="/" className="flex items-center">
-            <img src={logoImg} alt="ING KFZ Gutachten" className="h-10 md:h-12 brightness-0 invert" />
+            <img src={logoImg} alt="ING KFZ Gutachten" className="h-10 md:h-12" />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-0.5">
