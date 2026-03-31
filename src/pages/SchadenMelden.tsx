@@ -81,7 +81,7 @@ const SchadenMelden = () => {
             <h1 className="font-heading text-3xl sm:text-4xl md:text-6xl text-primary-foreground tracking-wide mb-3 sm:mb-4">
               Schaden melden
             </h1>
-            <p className="text-primary-foreground/60 text-base md:text-lg font-body max-w-2xl">
+            <p className="text-primary-foreground/60 text-sm sm:text-base md:text-lg font-body max-w-2xl">
               Füllen Sie das Formular aus und wir kümmern uns um alles Weitere.
               Bei unverschuldeten Unfällen entstehen Ihnen keine Kosten.
             </p>
